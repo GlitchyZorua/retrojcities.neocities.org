@@ -1,0 +1,7 @@
+how to keep untrained people secure on a network
+step 1: don't let them have any admin privileges
+step 2: don't let them send email outside the org unless specifically authorized
+step 3: don't let them bring in outside devices
+step 4: don't let them complain - redirect their complains to /dev/null
+step 5: watch as everything goes to shit
+step 6: go fuck yourself

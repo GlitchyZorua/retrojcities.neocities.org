@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chrome user detected!</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+  <img src="https://retrojcities.neocities.org/MOSHED-2023-2-27-18-21-5.gif" name="Image1" width="258" height="77" border="0">
+  <br>
+ <!-- this shit right here is why <blink> is obselete -->
+  <style>
+  .blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+</style>
+  <script>
+  // it should show the fucking user agent, but for whatever reason its not fucking working
+  // so i might do this later 
+  // fucking hell
+  
+
+  //var agent = navigator.userAgent;
+  //document.getElementById("outputagentass").innerHTML = "Your user agent is " + agent;
+  
+  // FIREFOX SPOOF DETECTION
+      setInterval(function () {
+    // check if the user is using firefox
+  const isFirefox = navigator.userAgent.toLowerCase().includes('firefox');
+
+    if (isFirefox) {
+      // redirect them to firefox.html and display a cheeky message. (https://www.youtube.com/watch?v=lDgD-_6eZEM)
+      window.location.replace("firefox.html");
+      } else {
+      // do nothing but keep looping!!!
+      }
+    }, 9000);
+  </script>
+  <p style="font-family: Nimbus Mono PS; font-size: 24pt;">Uh oh... Chrome user detected!</p><br>
+  <!-- <p id="outputagentass"></p> -->
+    <!-- <img src="donthurtheweb-avatar-120.png">-->
+    <p>We've blocked chrome users from accessing this website.</p><br>
+    <span style='font-weight:bold;'><span style='color:#FF0000;'>g</span><span style='color:#FF3800;'>o</span> <span style='color:#FFAA00;'>a</span><span style='color:#FFE200;'>h</span><span style='color:#E2FF00;'>e</span><span style='color:#AAFF00;'>a</span><span style='color:#71FF00;'>d</span> <span style='color:#00FF00;'>a</span><span style='color:#00FF38;'>n</span><span style='color:#00FF71;'>d</span> <span style='color:#00FFE2;'>c</span><span style='color:#00E2FF;'>r</span><span style='color:#00A9FF;'>y</span> <span style='color:#0038FF;'>a</span><span style='color:#0000FF;'>b</span><span style='color:#3800FF;'>o</span><span style='color:#7100FF;'>u</span><span style='color:#AA00FF;'>t</span> <span style='color:#FF00E2;'>i</span><span style='color:#FF00AA;'>t</span><span style='color:#FF0071;'>.</span> </span>
+    <p>TLDR: with Manifest v3 and the Web Integrity, <b> GOOGLE WILL KILL AD BLOCKERS. </b> </p>
+    
+    <p>If you still want to access this page, <b>spoof your user agent!</b> or Download a browser that isn't based on chrome, like Firefox or LibreWolf.</p>
+    <p>Don't disable javascript as the page uses a lot of javascript. A no-javascript version of this site will come in soon!</p><br>
+<b style="color:#FF0000">If it were to go through, you should start to get used to sites blocking your browser like this, user agent spoofing won’t help you then. (yes, we mean it)</b><br><br>
+    <audio controls autoplay loop>
+    <source src="https://github.com/GlitchyZorua/GlitchyZorua.github.io/raw/main/files/sfx/y2mate.is%20-%20Inspector%20Gadget%20Theme%20Song%20HQ%20-EcF2LOaLgA0-192k-1691800000.mp3" type="audio/mpeg">
+    </audio>
+    <audio autoplay>
+    <source src="https://github.com/GlitchyZorua/GlitchyZorua.github.io/raw/main/files/sfx/2023_10_02_19_16_19.mp3" type="audio/mpeg">
+    </audio><br><br>
+    <img src="anythingbutchrome.gif"><img src="chrmevil.gif">
+    <br>
+    <p>Questions? Please email me about it. RetroJBOT@hotmail.com</p>
+    <i>if music doesn't play automatically, your browser disabled autoplay.</i>
+    <br>
+    <i>Song Name: Inspector Gadget - Intro</i>
+    <br><br><br><br>
+    <p>Page Views</p><script type="text/javascript" src="//counter.websiteout.net/js/6/0/0/0"></script><br>
+    <a href="https://flagcounter.me/details/dJu"><img src="https://flagcounter.me/dJu/" alt="Flag Counter"></a>
+  </body>
+</html>
