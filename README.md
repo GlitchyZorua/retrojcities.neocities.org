@@ -1,3 +1,5 @@
-# The entire RetroJCity for Neocitites Source code.
+# New-RetroJCity-Site
 
-You can steal some of the code, but please, give credit.
+The new Website for retrojcity is coming very soon.
+
+I decided to make the layout google-like. since i'm a big fan of the old interface of google. but not the new one.
