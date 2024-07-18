@@ -2,21 +2,20 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta charset="utf-8" />
 <title>RetroJCity</title>
+<body>
 <script src="oneko.js"></script>
 <script src="nochrm.js"></script>
-
+<link href="https://melonking.net/styles/flood.css" rel="stylesheet" type="text/css" media="all" />
+<script src="https://melonking.net/scripts/flood.js"></script>
+<script src="https://cursor-party.glitchyzorua.partykit.dev/cursors.js"></script>
 <!-- SCM Music Player https://www.scmplayer.net -->
 <!--
 <!--<script type="text/javascript" src="https://www.scmplayer.net/script.js" -->
 <!-- data-config="{'skin':'skins/cyber/skin.css','volume':43,'autoplay':false,'shuffle':false,'repeat':1,'placement':'bottom','showplaylist':false,'playlist':[{'title':'Pix n%27 Love - Purple Groove','url':'https://github.com/GlitchyZorua/GlitchyZorua.github.io/raw/main/files/youtube_tBglvCnUOE8_audio.mp3'},{'title':'glaci%E6re - Two Months of Moments - 07 Confidence, Baby','url':'https://github.com/GlitchyZorua/GlitchyZorua.github.io/raw/main/files/sfx/glaciære -%20Two%20Months%20of%20Moments%20-%2007%20Confidence,%20Baby.mp3'},{'title':'glaci%E6re - Two Months of Moments - 04 Stars Forced To Shine','url':'https://github.com/GlitchyZorua/GlitchyZorua.github.io/raw/main/files/sfx/glaci%C3%A6re%20-%20Two%20Months%20of%20Moments%20-%2004%20Stars%20Forced%20To%20Shine.mp3'}]}" ></script>-->
 <!-- SCM Music Player script end -->
-
 <script>
 console.log("┬ ┬┌─┐┬  ┬  ┌─┐┬\n├─┤├┤ │  │  │ ││\n┴ ┴└─┘┴─┘┴─┘└─┘o");
 </script>
-<link href="https://melonking.net/styles/flood.css" rel="stylesheet" type="text/css" media="all" />
-<script src="https://melonking.net/scripts/flood.js"></script>
-<script src="https://cursor-party.glitchyzorua.partykit.dev/cursors.js"></script>
 </body>
 </html>
 <div id="banner-small" style="flex-direction: column; text-align: center; display: none; color: red;"><p><b>Stop using Chromium browsers, Google is trying to kill off ad and tracker blockers! </b><a href="https://gianmarco.gg/blinky"><b>Learn more</b></a> or <a onclick="hideNavWarn()"><b>close</b></a>.</p></div>
@@ -125,31 +124,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function searchstartpage() {
       if (url.value) {
-        window.location.replace("https://www.startpage.com/sp/search?query=" + encodeURI(url.value));
+        window.location.assign("https://www.startpage.com/sp/search?query=" + encodeURI(url.value));
       }
     }
 
     function searchneocities() {
       if (url.value) {
-        window.location.replace("https://neocities.org/browse?sort_by=followers&tag=" + encodeURI(url.value));
+        window.location.assign("https://neocities.org/browse?sort_by=followers&tag=" + encodeURI(url.value));
       }
     }
 
     function searchluck() {
       if (url.value === "the cake is a lie") {
-        window.location.replace('https://www.youtube.com/watch?v=JAw3V8ScLeI');
+        ('https://www.youtube.com/watch?v=JAw3V8ScLeI');
         return;
       }
       if (url.value === "fandom") {
-        window.location.replace('https://www.youtube.com/watch?v=qcfuA_UAz3I');
+        window.location.assign('https://www.youtube.com/watch?v=qcfuA_UAz3I');
         return;
       }
       if (url.value === "orgin") {
-        window.location.replace('https://windows93.net');
+        window.location.assign('https://windows93.net');
         return;
       }
       if (url.value === "list") {
-        window.location.replace('https://github.com/GlitchyZorua/GlitchyZorua.github.io/blob/main/projects/random/neocities/random.html');
+        window.location.assign('https://github.com/GlitchyZorua/GlitchyZorua.github.io/blob/main/projects/random/neocities/random.html');
         return;
       }
       if (url.value === "ding"){
@@ -157,11 +156,11 @@ document.addEventListener("DOMContentLoaded", function() {
         return;
       }
       if (url.value == "computer"){
-        window.location.replace('https://www.youtube.com/watch?v=aAtF-Zzdnc8')
+        window.location.assign('https://www.youtube.com/watch?v=aAtF-Zzdnc8')
         return;
       }
       if (url.value == "surprise"){
-        window.location.replace('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+        window.location.assign('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
         return;
       }
       if (url.value == "sdjlkfgjfsdlkgfdjglfkdjgfdlkg") {
@@ -182,10 +181,10 @@ document.addEventListener("DOMContentLoaded", function() {
         return
       }
       if (url.value == "best cooking site"){
-      window.location.replace("https://based.cooking/");
+      window.location.assign("https://based.cooking/");
       return
       }
-        window.location.replace("https://GlitchyZorua.github.io/projects/random/neocities/random.html");
+        window.location.assign("https://GlitchyZorua.github.io/projects/random/neocities/random.html");
     }
     gowww.addEventListener("click", searchstartpage);
     gonc.addEventListener("click", searchneocities);
@@ -200,11 +199,15 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 /*/
       if (event.shiftKey && event.key === "Enter"){
-       searchneocities();
+          url.addEventListener('focus', function() {
+            searchneocities();
+          });
        return;
       }
       if (!event.shiftKey && event.key === 'Enter') {
+        url.addEventListener('focus', function() {
         searchstartpage();
+        });
         return;
       }
     });
