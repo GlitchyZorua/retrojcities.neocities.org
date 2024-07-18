@@ -1,5 +1,3 @@
-# New-RetroJCity-Site
+# retrojcities.neocities.org
 
-The new Website for retrojcity is coming very soon.
-
-I decided to make the layout google-like. since i'm a big fan of the old interface of google. but not the new one.
+The whole backup for the neocities version of this site, just in case neocities decide to screw up.
