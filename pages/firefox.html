@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oops...</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+<script>
+setInterval(function () {
+var isChromium = window.chrome;
+var winNav = window.navigator;
+var vendorName = winNav.vendor;
+var isOpera = typeof window.opr !== "undefined";
+var isIEedge = winNav.userAgent.indexOf("Edg") > -1;
+var isIOSChrome = winNav.userAgent.match("CriOS");
+
+if (isIOSChrome) {
+     // FUCK OFF
+     //alert('SERIOUSLY? YOU ARE NOT A GOOD PERSON. YOU KNOW THAT. RIGHT?');
+     window.location.replace("https://www.youtube.com/watch?v=6SYT47Bp13g");
+} else if(
+  isChromium !== null &&
+  typeof isChromium !== "undefined" &&
+  vendorName === "Google Inc." &&
+  isOpera === false &&
+  isIEedge === false
+) {
+  // FUCK OFF
+  //alert('SERIOUSLY? YOU ARE NOT A GOOD PERSON. YOU KNOW THAT. RIGHT?');
+  window.location.replace("https://www.youtube.com/watch?v=6SYT47Bp13g"); // get out of my website
+} else { 
+   // not Google Chrome 
+}
+// I'm leaving this (the above code for backwards compatiblity with older chromium based shit browsers that don't support navigator.userAgentData.brands
+function isChromiumGoFuckYourselfMicrosoftEdge() {
+    for (brand_version_pair of navigator.userAgentData.brands) {
+        if (brand_version_pair.brand == "Chromium"){
+             // FUCK OFF
+            //alert('SERIOUSLY? YOU ARE NOT A GOOD PERSON. YOU KNOW THAT. RIGHT?');
+            window.location.replace("https://www.youtube.com/watch?v=6SYT47Bp13g");
+        }
+    }
+}
+ // ok so apparently fucking microsoft edge was able to bypass this. 
+ // this is a hack, but it should work.
+isChromiumGoFuckYourselfMicrosoftEdge();
+}, 9000);
+  </script>
+  </head>
+  <body>
+    <h1>what did you do?</h1>
+
+    <p>Oh... this Internet Browser has <b><i>somehow</i></b> became a non-chromium based browser...</p>
+    
+    <p>You didn't spoof the user agent did you?</p>
+    
+    <p>No, no no... you are hiding something from me...</p>
+    
+    <p>whatever. i did say you can spoof your user agent, so it doesn't matter. have fun.</p>
+    
+    <a href="https://retrojcities.neocities.org">Return to Home</a>
+  </body>
+</html>
