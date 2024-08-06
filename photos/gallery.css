@@ -1,0 +1,242 @@
+/* Melon's Gallery Maker! - Mega Grid v0.2 */
+ 
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Liberatoin Mono, monospace;
+}
+
+a:link {
+  color: cyan;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav b {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav b:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav b.active {
+  background-color: #04AA6D;
+  color: white;
+}
+a:visited { color:#ba5fa5; }
+
+body {
+    font-family: monospace;
+    background-color: #f6f4f1;
+    font-size: 0.9rem;
+    padding: 5px;
+}
+
+a,
+a:visited {
+    color: #e73400;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1,
+h2 {
+    font-size: 0.8rem;
+}
+
+nav {
+    clear: both;
+}
+
+nav ul,
+nav li {
+    padding: 0px 15px;
+}
+
+footer {
+    clear: both;
+    margin-top: 20px;
+    font-size: 0.7em;
+}
+
+/* Gallery Pages */
+
+#photos {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#photos a {
+    display: flex;
+    flex-flow: column;
+}
+
+#photos figure {
+    margin: 0px;
+    max-width: min-content;
+}
+
+#photos img {
+    object-fit: cover;
+    width: 50px;
+    height: 50px;
+    /* Enable this for pixel art!! */
+    /* image-rendering: pixelated; */
+}
+
+#photos img:hover {
+    opacity: 0.3;
+}
+
+#photos span,
+#photos figcaption {
+    font-size: 0.5em;
+    word-break: break-all;
+    max-width: 95%;
+}
+
+#photos span {
+    display: block;
+}
+
+#photos figcaption {
+    padding: 6px 0px;
+}
+
+.page-links ul {
+    padding: 5px 5px;
+    margin: 0px;
+    display: inline-block;
+}
+.page-links li {
+    list-style: none;
+    display: inline;
+    margin: 0px 1px;
+    padding: 0px;
+}
+
+/* Mobile Styling */
+
+@media (max-width: 800px) {
+    #photos img {
+        width: 100px;
+        height: 100px;
+    }
+
+    #photos span,
+    #photos figcaption {
+        font-size: 0.8em;
+    }
+}
+
+/* Styling for JavaScript viewer (if enabled) */
+
+#js-viewer {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(231, 52, 0, 0.627);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#js-viewer img {
+    max-width: 95%;
+    max-height: 80%;
+    height: auto;
+    width: auto;
+}
+
+#js-viewer span {
+    margin-top: 10px;
+}
+
+#js-viewer span button {
+    border-radius: 0px;
+    border: 2px outset #cecece;
+    background-color: #e2e2e2;
+    cursor: pointer;
+}
+
+#js-viewer span button:hover {
+    border: 2px inset #cecece;
+    background-color: #b8b8b8;
+}
+ 
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: Liberatoin Mono, monospace;
+}
+
+a:link {
+  color: cyan;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav b {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav b:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav b.active {
+  background-color: #04AA6D;
+  color: white;
+}
+a:visited { color:#ba5fa5; }
