@@ -2,6 +2,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta charset="utf-8" />
 <title>RetroJCity</title>
+<script>
+if (navigator.userAgent.includes("WebTV")){
+alert('Heya! Sorry, but WebTV boxes are not supported, Unfortunately. For the safety of your poor webtv box trying to run all of the javascript in this page, Page loading halted. Press OK to redirect you to something else!');
+window.location.replace('https://theoldnet.com/')
+}
+</script>
 <body>
 <script src="oneko.js"></script>
 <script src="nochrm.js"></script>
@@ -65,8 +71,8 @@ document.onclick=function(event){var elems=document.getElementsByName('more');if
     <a class="q" href="https://en.wikipedia.org/wiki/Criticism_of_patents?useskin=vector">Patents</a><br>
     
     <a href="javascript:alert('nothing yet.')" class="q"><b>even more &raquo;</b></a></span></font></td></tr></table>
-    <table cellpadding="0" cellspacing="0"><tr valign="top"><td width="25%">&nbsp;</td><td align="center" nowrap><input name="hl" type="hidden" value="en"><input type="hidden" name="ie" value="ISO-8859-1"><input autofocus placeholder="Search..." type="text" id="url" size="55"><br>
-    <input name="gowww" type="submit" value="StartPage Search">
+    <table cellpadding="0" cellspacing="0"><tr valign="top"><td width="25%">&nbsp;</td><td align="center" nowrap><input name="hl" type="hidden" value="en"><input type="hidden" name="ie" value="ISO-8859-1"><input autofocus placeholder="Search..." type="text" id="url" size="55"><script src="searchthing.js"></script><select id="searchEngineSelect"></select><br>
+    <input name="gowww" type="submit" value="WWW Search">
     <input name="gonc" type="submit" value="Neocities Search">
     <input name="luck" type="submit" value="I'm Feeling Lucky"></td>
     <td nowrap width="25%"><font size="-2">&nbsp;&nbsp;<a href="javascript:alert('There is no advanced search.')">Advanced Search</a>
@@ -173,7 +179,17 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.assign("https://www.startpage.com/sp/search?query=" + encodeURI(url.value));
       }
     }
-
+    function searchwww() {
+      if (url.value) {
+       // const searchUrl = searchEngineSelect.value; + encodeURI(url.value);
+       if (searchEngineSelect.value === "Google (No AI)"){
+         alert('Click on the "Web" tab in the google search');
+         window.location.assign(searchEngineSelect.value + encodeURI(url.value) + "&udm=14");
+       } else {
+        window.location.assign(searchEngineSelect.value + encodeURI(url.value));
+       }
+      }
+    }
     function searchneocities() {
       if (url.value) {
         window.location.assign("https://neocities.org/browse?sort_by=followers&tag=" + encodeURI(url.value));
@@ -233,7 +249,8 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.assign("https://GlitchyZorua.github.io/projects/random/neocities/random.html");
       
     }
-    gowww.addEventListener("click", searchstartpage);
+    //gowww.addEventListener("click", searchstartpage);
+    gowww.addEventListener("click", searchwww);
     gonc.addEventListener("click", searchneocities);
     luck.addEventListener("click", searchluck);
     
@@ -249,12 +266,12 @@ url.addEventListener('keydown', (event) => {
       if (event.shiftKey && event.key === "Enter"){
           url.addEventListener('focus', function() {
             searchneocities();
-          });
+  });
        return;
       }
       if (!event.shiftKey && event.key === 'Enter') {
         url.addEventListener('focus', function() {
-        searchstartpage();
+        searchwww();
         });
         return;
       }
@@ -316,9 +333,9 @@ if (window.location.host === "glitchyzorua.github.io" || window.location.host ==
     <a href="https://flagcounter.me/details/dJu"><img src="https://flagcounter.me/dJu/" alt="Flag Counter"></a><br><br>
     <a href='http://internetometer.com/give/50041'><img src='http://internetometer.com/image/50041.png'/></a><br><br>
     <iframe src="//incr.easrng.net/badge?key=retrojcity" style="background: url(//incr.easrng.net/bg.gif)" title="increment badge" width="88" height="31" frameborder="0"></iframe><br><br>
-        <a href="https://sugarforbrains.neocities.org/"><img src="sugarbutton1.gif" name="HTTPS://SUGARFORBRAINS.NEOCITIES.ORG/" width="88" height="31" border="0"></a><a href="https://sugarforbrains.neocities.org/"><img src="button.gif" name="HTTPS://SUGARFORBRAINS.NEOCITIES.ORG/" width="88" height="31" border="0"></a><a href="https://sugarforbrains.neocities.org/"><img src="sugarOG.gif" name="HTTPS://SUGARFORBRAINS.NEOCITIES.ORG/" width="88" height="31" border="0"></a><a href="https://y2k.gov"><img src="/files/y2k.gif"></a><a href="https://www.amazon.com"><img src="./files/amazon.gif"></a><a href="https://www.mozilla.org/en-US/firefox/new/"><img src="./files/firefoxnow.gif"></a><a href="https://joinmastodon.org/"><img src="./files/masto.gif"></a><img href="/files/bank88.gif"><a href="https://googol.neocities.org/"><img src="https://googol.neocities.org/googol_thumb.gif"></a><!-- <a href="https://districts.neocities.org/"><img src="https://districts.neocities.org/buttons/districtspippin.png"></a>--><a href="https://www.netflix.com"><img src="./files/netflix-88x31.gif"></a><img src="./files/blank88.gif"><img src="./files/anybrowser.gif"><a href="https://www.nationalgeographic.com/"><a href ="https://www.nationalgeographic.com/"><img src='./files/NGS_88x31_logo.gif'></a><a href="https://www.theoldnet.com/"><img src=/files/theoldnetanimblur2.gif></a><img src="/files/Anaolsux.gif"><img href="/files/netflix-88x31.gif"><img href="/files/cheezit.gif"><a href="https://scratch.mit.edu/downloads/"><img src="/files/download_scratch.gif"></a><a href="https://giftscop.com/"><img src="./files/gcbutton_childlibrary.gif"></a><a href="https://sterophonick.github.io/index.html"><img src="./files/web_button.gif"></a><a href="https://gifypet.neocities.org/"><img src="./files/badge.gif"></a><a href="http://toastytech.com/evil/buttons.html"><img src="./files/stopieani.gif"><!--- <img src="./files/fartpage.gif">---> <img src="./files/exploit.gif"><img src="./files/nuts.gif"><img src="./files/iebad.gif"><img src="./files/iecrash.gif"><img src="./files/mandatory.gif"><img src="./files/idiotexpl.gif"><img src="./files/getmozilla.gif"><img src="./files/getmozilla2.gif"><img src="./files/getbsod.gif"><img src="./files/iemickey.gif"><img src="./files/ieborg.gif"><img src="./files/fuckie.gif"><img src="./files/ie1984.gif"><img src="./files/ieide.gif"><img src="./files/iebarf.gif"><!--<img src="./files/duh.gif">--><!-- <img src="./files/burniebtn.gif">--><img src="./files/washie.gif"><!-- <img src="./files/ieevil.gif">--><img src="./files/ieexplode.gif"><img src="./files/msiemoz.gif"></a><a href="https://wac.neocities.org/"><img src="https://i.imgur.com/XTmRsxw.jpg"></a><img src="./files/tj88x31.gif"><img src="./files/sears.png"><img src="./files/nbc.gif"><img src='./files/toys.gif'></img><a href="https://datgameryolo.neocities.org" title="DatGamerYolo's Website"><a href="https://gianmarco.gg/"><img src="files/gmgpin.gif"></img></a><a href="https://dokode.moe/"><img src="https://dokode.moe/media/88x31sites/dokodemobutton3.gif"><img src="https://dokode.moe/media/88x31sites/dokodemobutton2.gif"></a><a href="https://dimden.dev/"><img src="https://dimden.dev/services/images/88x31.gif"></a><a href="https://osu.ppy.sh/users/35270913"><img src="/files/osu.png"></a><a href="https://rol.nekoweb.org/"><img src="https://rol.nekoweb.org/button.gif" alt="Enter Rol's Space Cabin'"c></a><img src="/files/ieisevil.gif"><!--<img src="https://datgameryolo.neocities.org/badbutton.png" alt="DatGamerYolo's Website">--><a target="_blank" href="https://melonking.net"><img alt="Visit Melonking.Net!" src="https://melonking.net/images/badges/MELON-BADGE.GIF" style="image-rendering: pixelated"></a><img src="files/tor.gif"><img src="files/wii.gif"><a href="https://discord.gg/3ZM9SyKu8Z"><img src="files/neonet_green.gif"></a><a href="https://minecraft.net"><img src="files/minecraft.gif"></img></a><a href="https://steamcommunity.com/"><img src="files/steam.gif"></a><img src="files/mY3u0hA.gif"></img><img src="files/Ebay.gif"><a href="https://gifypet.neocities.org/?melonframe=true"><img src="files/gifypet.gif"></a><a href="https://tamanotchi.world/"><img src="files/tamanotchi.gif"></a></img><br>
+        <a href="https://sugarforbrains.neocities.org/"><img src="sugarbutton1.gif" name="HTTPS://SUGARFORBRAINS.NEOCITIES.ORG/" width="88" height="31" border="0"></a><a href="https://sugarforbrains.neocities.org/"><img src="button.gif" name="HTTPS://SUGARFORBRAINS.NEOCITIES.ORG/" width="88" height="31" border="0"></a><a href="https://sugarforbrains.neocities.org/"><img src="sugarOG.gif" name="HTTPS://SUGARFORBRAINS.NEOCITIES.ORG/" width="88" height="31" border="0"></a><a href="https://y2k.gov"><img src="/files/y2k.gif"></a><a href="https://www.amazon.com"><img src="./files/amazon.gif"></a><a href="https://www.mozilla.org/en-US/firefox/new/"><img src="./files/firefoxnow.gif"></a><a href="https://joinmastodon.org/"><img src="./files/masto.gif"></a><img href="/files/bank88.gif"><a href="https://googol.neocities.org/"><img src="https://googol.neocities.org/googol_thumb.gif"></a><!-- <a href="https://districts.neocities.org/"><img src="https://districts.neocities.org/buttons/districtspippin.png"></a>--><a href="https://www.netflix.com"><img src="./files/netflix-88x31.gif"></a><img src="./files/blank88.gif"><img src="./files/anybrowser.gif"><a href="https://www.nationalgeographic.com/"><a href ="https://www.nationalgeographic.com/"><img src='./files/NGS_88x31_logo.gif'></a><a href="https://www.theoldnet.com/"><img src=/files/theoldnetanimblur2.gif></a><img src="/files/Anaolsux.gif"><img href="/files/netflix-88x31.gif"><img href="/files/cheezit.gif"><a href="https://scratch.mit.edu/downloads/"><img src="/files/download_scratch.gif"></a><a href="https://giftscop.com/"><img src="./files/gcbutton_childlibrary.gif"></a><a href="https://sterophonick.github.io/index.html"><img src="./files/web_button.gif"></a><a href="https://gifypet.neocities.org/"><img src="./files/badge.gif"></a><a href="http://toastytech.com/evil/buttons.html"><img src="./files/stopieani.gif"><!--- <img src="./files/fartpage.gif">---> <img src="./files/exploit.gif"><img src="./files/nuts.gif"><img src="./files/iebad.gif"><img src="./files/iecrash.gif"><img src="./files/mandatory.gif"><img src="./files/idiotexpl.gif"><img src="./files/getmozilla.gif"><img src="./files/getmozilla2.gif"><img src="./files/getbsod.gif"><img src="./files/iemickey.gif"><img src="./files/ieborg.gif"><img src="./files/fuckie.gif"><img src="./files/ie1984.gif"><img src="./files/ieide.gif"><img src="./files/iebarf.gif"><!--<img src="./files/duh.gif">--><!-- <img src="./files/burniebtn.gif">--><img src="./files/washie.gif"><!-- <img src="./files/ieevil.gif">--><img src="./files/ieexplode.gif"><img src="./files/msiemoz.gif"></a><a href="https://wac.neocities.org/"><img src="https://i.imgur.com/XTmRsxw.jpg"></a><img src="./files/tj88x31.gif"><img src="./files/sears.png"><img src="./files/nbc.gif"><img src='./files/toys.gif'></img><a href="https://datgameryolo.neocities.org" title="DatGamerYolo's Website"><a href="https://gianmarco.gg/"><img src="files/gmgpin.gif"></img></a><a href="https://dokode.moe/"><img src="https://dokode.moe/media/88x31sites/dokodemobutton3.gif"></a><a href="https://store.steampowered.com/app/420530/OneShot/"><img src="files/OneShot_button.gif"></a><!--<img src="https://dokode.moe/media/88x31sites/dokodemobutton2.gif">--></a><a href="https://dimden.dev/"><img src="https://dimden.dev/services/images/88x31.gif"></a><a href="https://osu.ppy.sh/users/35270913"><img src="/files/osu.png"></a><a href="https://rol.nekoweb.org/"><img src="https://rol.nekoweb.org/button.gif" alt="Enter Rol's Space Cabin'"c></a><img src="/files/ieisevil.gif"><!--<img src="https://datgameryolo.neocities.org/badbutton.png" alt="DatGamerYolo's Website">--><a target="_blank" href="https://melonking.net"><img alt="Visit Melonking.Net!" src="https://melonking.net/images/badges/MELON-BADGE.GIF" style="image-rendering: pixelated"></a><img src="files/tor.gif"><img src="files/wii.gif"><a href="https://discord.gg/3ZM9SyKu8Z"><img src="files/neonet_green.gif"></a><a href="https://minecraft.net"><img src="files/minecraft.gif"></img></a><a href="https://steamcommunity.com/"><img src="files/steam.gif"></a><img src="files/mY3u0hA.gif"></img><img src="files/Ebay.gif"><a href="https://gifypet.neocities.org/?melonframe=true"><img src="files/gifypet.gif"></a><a href="https://tamanotchi.world/"><img src="files/tamanotchi.gif"></a></img><br>
         
-<a href="https://tamanotchi.world/6314c"><img src="https://tamanotchi.world/i2/6314" alt="It's tamaNOTchi! Click to feed!"></a> <img src="http://www.mabsland.com/Pandas/Censor_NYRb.gif">
+<a href="https://tamanotchi.world/6314c"><img src="https://tamanotchi.world/i2/6314" alt="It's tamaNOTchi! Click to feed!"></a> <img src="http://www.mabsland.com/Pandas/Censor_NYRb.gif"><object id="melonland-surf-club" data="https://melonland.net/surf-badge.svg?fill=#ffffff" type="image/svg+xml" style="width: 100px; height: 100px;"></object>
 <div style="width:40px; height:40px; position:absolute; bottom:0px; left:0px;">
 <div id="app"></div>
 <script src="https://unpkg.com/webamp"></script>
@@ -334,6 +351,12 @@ if (window.location.host === "glitchyzorua.github.io" || window.location.host ==
                 title: "Turn Me Around",
             },
             url: "https://glitchyzorua.github.io/files/Tree%20Palm%20-%20Turn%20Around%20-%20Tree%20Palm%20(youtube,%20B7plBbp76aU).mp3",
+        }, {
+          metaData: {
+            artist: "author (tbotv)",
+            title: "DELTAQUEST",
+          },
+          url: "https://glitchyzorua.github.io/files/sfx/64%20-%20DELTAQUEST%20-%20tbotv%20guy's%20music%20and%20sometimes%20other%20stuff%20(youtube,%200VCQKdoztEY).mp3",
         }, {
             metaData: {
                 artist: "Unknown",
@@ -362,7 +385,13 @@ if (window.location.host === "glitchyzorua.github.io" || window.location.host ==
             },
             url: "https://glitchyzorua.github.io/files/sfx/glaci%C3%A6re%20-%20Two%20Months%20of%20Moments%20-%2001%20Into%20the%20Maelstrom.mp3",
         },
-        
+        {
+            metaData: {
+                artist: "Aquacycle & VaVr",
+                title: "ABCnymph",
+            },
+            url: "https://glitchyzorua.github.io/files/sfx/Aquacycle - VvvvvaVvvvvvr's Vighest Vuality Vips Vol - 27 ABCnymph.mp3",
+        },
         {
             metaData: {
                 artist: "New Order",

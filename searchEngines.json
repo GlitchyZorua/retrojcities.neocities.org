@@ -1,0 +1,94 @@
+{
+  "searchEngines": [
+    {
+      "name": "Startpage",
+      "url": "https://www.startpage.com/sp/search?query=",
+      "disabled": false
+    },
+    {
+      "name": "Google",
+      "url": "https://www.google.com/search?q=",
+      "disabled": false
+    },
+    {
+      "name": "Google (No AI)",
+      "url": "https://www.google.com/search?q=",
+      "disabled": false
+    },
+    {
+      "name": "Melonland Forum",
+      "url": "https://forum.melonland.net/index.php?action=search;advanced;search=",
+      "disabled": false
+    },
+    {
+      "name": "Bing",
+      "url": "https://www.bing.com/search?q=",
+      "disabled": false
+    },
+    {
+      "name": "DuckDuckGo",
+      "url": "https://duckduckgo.com/?q=",
+      "disabled": false
+    },
+    {
+      "name": "DuckDuckGo Lite",
+      "url": "https://start.duckduckgo.com/lite/?q=",
+      "disabled": false
+    },
+    {
+      "name": "FrogFind",
+      "url": "https://frogfind.com/?q=",
+      "disabled": false
+    },
+    {
+      "name": "Wikipedia",
+      "url": "https://en.wikipedia.org/w/index.php?go=Go&search=",
+      "disabled": false
+    },
+    {
+      "name": "MetaGer",
+      "url": "https://metager.org/meta/meta.ger3?eingabe=",
+      "disabled": false
+    },
+    {
+      "name": "Veronica-2",
+      "url": "https://gopher.floodgap.com/gopher/gw?ss=gopher%25253A%25252F%25252Fgopher.floodgap.com%25253A70%25252F7%25252Fv2%25252Fvs&sq=",
+      "disabled": false
+    },
+    {
+      "name": "YouTube",
+      "url": "https://www.youtube.com/results?search_query=",
+      "disabled": false
+    },
+    {
+      "name": "Karma Search",
+      "url": "https://karmasearch.org/search?q=",
+      "disabled": false
+    },
+    {
+      "name": "osu!",
+      "url": "https://osu.ppy.sh/beatmapsets?q=",
+      "disabled": false
+    },
+    {
+      "name": "GitHub",
+      "url": "https://github.com/search?q=",
+      "disabled": false
+    },
+    {
+      "name": "Scratch (MIT)",
+      "url": "https://scratch.mit.edu/search/projects?q=",
+      "disabled": false
+    },
+    {
+      "name": "wiby",
+      "url": "https://wiby.me/?q=",
+      "disabled": false
+    },
+    {
+      "name": "URL",
+      "url": "",
+      "disabled": false
+    }
+  ]
+}
