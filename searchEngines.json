@@ -89,6 +89,21 @@
       "name": "URL",
       "url": "",
       "disabled": false
+    },
+    {
+      "name": "Old'avista",
+      "url": "https://oldavista.com/search?l=english&q=",
+      "disabled": false
+    },
+    {
+      "name": "Internet Archive",
+      "url": "https://archive.org/search?query=",
+      "disabled": false
+    },
+    {
+      "name": "TheOldNet",
+      "url": "http://theoldnet.com/find?query=",
+      "disabled": false
     }
   ]
 }
