@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<body>
+<script src="https://cursor-party.glitchyzorua.partykit.dev/cursors.js"></script>
+</body>
+
+<html lang="en-US">
+
+<!--
+    <script type="text/javascript">(function(){function a(d){this.t={};this.tick=function(e,f,b){b=b?b:(new Date).getTime();this.t[e]=[b,f]};this.tick("start",null,d)}var c=new a;window.jstiming={Timer:a,load:c};try{var g=null;if(window.chrome&&window.chrome.csi)g=Math.floor(window.chrome.csi().pageT);if(g==null)if(window.gtbExternal)g=window.gtbExternal.pageT();if(g==null)if(window.external)g=window.external.pageT;if(g)window.jstiming.pt=g}catch(h){};})();
+
+    </script>-->
+    <title>RetroJCity Labs - Explore RetroJCity's New Ideas</title>
+    <meta name="description" content="Play around with prototypes of some of RetroJCity's wild and crazy ideas and offer feedback directly to the engineers who developed them."/>
+
+    <style>
+  /* CSG header */
+
+.todo {
+  background-color: red;
+  color: rgba(255, 255, 255, 0);
+}
+
+body {
+  font: 81.25% arial, sans-serif;
+  background: #000000;
+  margin: 3px 8px;
+}
+a:link,
+a:focus {
+  color: #00c;
+}
+a:active {
+  color: red;
+}
+
+/* OneGoogle and GAIA */
+
+#gbar {
+  height: 22px;
+  padding-left: 2px;
+}
+
+.gbh, .gbd {
+  border-top: 1px solid #C9D7F1;
+  font-size: 1px;
+}
+
+.gbh {
+  height: 0;
+  position: absolute;
+  top: 24px;
+  width: 100%;
+}
+
+#gbi, #gbs {
+  background-color: #FFFFFF;
+  left: 0;
+  position: absolute;
+  top: 24px;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+#gbi {
+  border-color: #C9D7F1 #3366CC #3366CC #A2BAE7;
+  border-style: solid;
+  border-width: 1px;
+  z-index: 1001;
+}
+
+#guser {
+  padding-bottom: 7px !important;
+}
+
+#gbar, #guser {
+  padding-top: 1px !important;
+}
+
+.gb1, .gb3 {
+  height: 22px;
+  margin-right: 0.73em;
+  vertical-align: top;
+}
+
+#gbar {
+  float: left;
+}
+
+.gb2 {
+  display: block;
+  padding: 0.2em 0.5em;
+}
+
+
+.gb2, .gb3 {
+  text-decoration: none;
+}
+
+a.gb2:hover {
+  background-color: #3366CC;
+  color: #FFFFFF !important;
+}
+
+#gb {
+  margin: 0;
+  padding: 1px 0 7px;
+  text-align: right;
+}
+
+
+/* Below OneGoogle and GAIA */
+
+#g-hdr {
+  clear: left;
+}
+
+#g-hdr form {
+  display: inline;
+}
+
+#g-hdr-logo {
+  padding-left: 0.9em;
+  padding-right: 15px;
+}
+
+#g-hdr-logo img {
+  border-style: none;
+  margin: 0 0 5px 0;
+  padding: 0;
+  vertical-align: middle;
+}
+
+#g-hdr-q {
+  padding: 10px;
+  width: 100%;
+}
+
+#g-hdr-q div {
+  color: #676767;
+}
+
+#g-hdr-q input {
+  margin-right: .365em; /* 1 space */
+}
+
+#g-hdr-q-mod {
+  font-size: 76.92%; /* 10px */
+  padding: 0 0 0 0.365em; /* 2 spaces */
+}
+
+#g-hdr-q-mod a {
+  display: block; /* Do we need this to force a new line? */
+}
+
+#g-hdr-notes {
+  display: table;
+  margin-top: -1.307em;
+  margin-bottom: 0.077em;
+  text-align: right;
+  width: 100%;
+}
+
+#g-hdr-title {
+  border-top: 1px solid #6b90da;
+  background: #e5ecf9;
+  margin: 0 0 6px; /* Controls the spacing between title bar and Sort by links */
+}
+
+#g-hdr-title div {
+  float: left;
+}
+
+#g-hdr-title-modes {
+  padding: 5px 0 0 0.365em; /* space in front of "Web" in title bar */
+}
+
+#g-hdr-title-modes a,
+#g-hdr-title-modes b {
+  margin-right: .6em;
+}
+
+#g-hdr-title-res {
+  text-align: right;
+  white-space: nowrap;
+  padding: 5px 0.365em 4px 0;
+  margin: 0;
+}
+
+div#g-hdr-title-filters {
+  margin-left: 0.86em; /* This added with the 0.6em equals 1.46em, which is 4 spaces */
+}
+
+div#g-hdr-title-filters p {
+  float: left;
+  margin: 0;
+  padding: 5px 0.365em 0 0;
+}
+
+div#g-hdr-title-filters select {
+  float: left;
+  margin: 2px 0 0 0;
+}
+
+div#g-hdr-title-video {
+  margin: 2px 0 0 1.46em; /*aka 4 spaces*/
+}
+
+div#g-hdr-title-video a img {
+  border: none;
+}
+
+#g-hdr-sort {
+  text-align: right;
+}
+
+#g-hdr-sort b,
+#g-hdr-sort a {
+  margin-left: .73em; /*aka 2 spaces*/
+}
+
+/* Pagination */
+
+#nav {
+  border-collapse: collapse;
+  margin: 0 auto !important;
+  text-align: center;
+  direction: ltr;
+}
+
+#nav a,
+#nav a:visited,
+.blk a {
+  color: #000;
+}
+#nav .b a,
+#nav .b a:visited {
+  color: #00c;
+  font-size: medium;
+}
+#nav .i {
+  color: #a90a08;
+  font-weight: bold;
+}
+.csb,
+.ss {
+  background: url("") no-repeat;
+  height: 26px;
+  display: block;
+}
+.cur {
+  color: #A90A08;
+  font-weight: bold;
+}
+.b {
+  font-weight: bold;
+}
+
+/* Common styles */
+
+p {
+  margin: 1em 0;
+}
+a.more {
+  color: #7777cc;
+}
+.nowrap {
+  white-space: nowrap;
+}
+h1 {
+  margin: 0 0.33em 0.5em 0em;
+  padding: 0.08em 0.3em;
+  background: #e5ecf9;
+  font-size: 150%;
+  border-top: 1px solid #6B90DA;
+  font-weight: bold;
+  color: black;
+}
+/* style for experiments header on main page */
+h1.experiments {
+  margin: 0 0 0.5em 0;
+  padding: 0.4em 0.45em;
+  font-size: 100%;
+}
+h2 {
+  margin: 0 0 0.5em 0;
+  padding: 0.4em 0.45em;
+  background: #4d71b4;
+  font-size: 100%;
+  font-weight: bold;
+  color: black;
+}
+/* put a topbar on the heading */
+h2.topbar {
+  border-top: 1px solid #6B90DA;
+}
+/* display apps normally */
+h2.app {
+  margin: 0 0 0 0;
+  padding: 0 0;
+  font-weight: normal;
+  background: rgb(0, 0, 0);
+}
+#left-sidebar h2 {
+  padding: 0.75em 0.45em 0 0.45em;
+  margin: 1em 0 0.2em 0;
+  font-size: 100%;
+  font-weight: bold;
+  background-color: white;
+}
+#left-sidebar select {
+  width: 10.2em;
+}
+h5 {
+  font-size: 100%;
+  font-weight: bold;
+  margin: 0 0 0.5em 0;
+  padding: 0 0.45em;
+}
+.date {
+  color: #666666;
+}
+
+.stars5,
+.stars4,
+.stars3,
+.stars2,
+.stars1,
+.stars0 {
+  width: 50px;
+  height: 9px;
+  overflow: hidden;
+  display: inline-block;
+  margin: 0 0.2em;
+  background-repeat: no-repeat;
+  vertical-align: middle;
+}
+/* Nasty fix for IE7 */
+* + html .stars5,
+* + html .stars4,
+* + html .stars3,
+* + html .stars2,
+* + html .stars1,
+* + html .stars0 {
+  vertical-align: bottom;
+  padding-bottom: 3px;
+  padding-right: 4px;
+}
+/*/
+.stars5 {
+  background-image: url(/web/20101030220205im_/http://www.googlelabs.com/images/stars-5.png);
+}
+.stars4 {
+  background-image: url(/web/20101030220205im_/http://www.googlelabs.com/images/stars-4.png);
+}
+.stars3 {
+  background-image: url(/web/20101030220205im_/http://www.googlelabs.com/images/stars-3.png);
+}
+.stars2 {
+  background-image: url(/web/20101030220205im_/http://www.googlelabs.com/images/stars-2.png);
+}
+.stars1 {
+  background-image: url(/web/20101030220205im_/http://www.googlelabs.com/images/stars-1.png);
+}
+.stars0 {
+  background-image: url(/web/20101030220205im_/http://www.googlelabs.com/images/stars-0.png);
+}
+/*/
+/* Main layout */
+
+#left-sidebar {
+  width: 10.7em;
+  padding: 0 0 1em 0;
+  margin-left: 0.5em;
+  float: left;
+  border-right: 1px solid #6B90DA;
+  clear: both;
+}
+#main-with-sidebar {
+  margin-left: 10.3em;
+  margin-right: 25%;
+  margin-bottom: 1.5em;
+  padding: 0 1.5em 0 2em;
+}
+#main {
+  margin-left: 10.2em;
+  padding: 0 1em 1em 2em;
+}
+#right-sidebar {
+  width: 25%;
+  float: right;
+  padding: 0 0.45em;
+}
+#footer {
+  clear: both;
+  line-height: 160%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  text-align: center;
+  color: #666666;
+  padding-top: 1em;
+  border-top: 1px solid #c9d7f1;
+}
+#footer span {
+  color: black;
+}
+
+/* Left sidebar */
+
+#left-sidebar ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+#left-sidebar li {
+  clear: both;
+  padding-left:1em;
+  text-indent:-1em;
+}
+#left-sidebar a {
+  clear: both;
+  display: block;
+  line-height: 160%;
+  padding: 0 0 0 0.45em;
+  text-decoration: none;
+}
+#left-sidebar .name {
+  
+  text-decoration: underline;
+}
+#left-sidebar .selected {
+  background: #e5ecf9;
+}
+#left-sidebar .selected .name {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+#left-sidebar .selected {
+  background: #e5ecf9;
+}
+#left-sidebar .selected .name {
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+}
+#left-sidebar .subscribe li {
+  margin-left: 0.45em;
+  padding-left: 14px;
+}
+#left-sidebar .subscribe li.rss {
+  /*/
+  background: url(https://web.archive.org/web/20101030220205im_/http://www.gstatic.com/labs/images/icon-rss-20090603.png) left center no-repeat;
+  /*/
+  text-indent:0em;
+}
+#left-sidebar .subscribe li.email {
+ /*/
+  background: url(https://web.archive.org/web/20101030220205im_/http://www.gstatic.com/labs/images/icon-mail-20090603.png) left center no-repeat;
+ /*/
+  text-indent:0em;
+}
+#left-sidebar .subscribe li.igoogle {
+  /*/
+  background: url(https://web.archive.org/web/20101030220205im_/http://www.gstatic.com/labs/images/igoogle-16-20090603.gif) left center no-repeat;
+  /*/
+  text-indent:0em;
+}
+
+/* Right sidebar */
+
+.section {
+  margin-bottom: 1em;
+  min-height: 100px;
+}
+
+#right-sidebar .section {
+  margin-bottom: 1em;
+}
+#right-sidebar .section ul {
+  margin: 0;
+  padding: 0 0.5em 1em 0.5em;
+  list-style: none;
+}
+#right-sidebar .section .meta {
+  padding-top: 0.2em;
+}
+#right-sidebar .section .links {
+  margin: 0.5em;
+  text-align: right;
+}
+#right-sidebar .section .content {
+  overflow: hidden;
+  padding: 0 0.45em;
+}
+
+/* Right sidebar sections */
+
+#all-time-favorites li,
+#other-experiments li,
+#recently-launched li {
+  margin-bottom: 0.75em;
+  padding-right: 32px;
+}
+/*/
+#other-experiments .dogfood-central {
+
+  background: url(https://web.archive.org/web/20101030220205im_/http://www.gstatic.com/labs/images/dogfood-20100331.png) right center no-repeat;
+}
+#other-experiments .gmail-labs {
+  background: url(https://web.archive.org/web/20101030220205im_/http://www.gstatic.com/labs/images/labs-gmail-20090603.png) right center no-repeat;
+}
+#other-experiments .cal-labs {
+  background: url(https://web.archive.org/web/20101030220205im_/http://www.gstatic.com/labs/images/labs-cal-20090723.png) right center no-repeat;
+}
+#other-experiments .code-labs {
+  background: url(https://web.archive.org/web/20101030220205im_/http://www.gstatic.com/labs/images/labs-code-20090603.png) right center no-repeat;
+}
+#other-experiments .experimental-search {
+  background: url(https://web.archive.org/web/20101030220205im_/http://www.gstatic.com/labs/images/labs-search-20090603.png) right center no-repeat;
+}
+#other-experiments .maps-labs {
+  background: url(https://web.archive.org/web/20101030220205im_/http://www.gstatic.com/labs/images/labs-maps-20090603.png) right center no-repeat;
+}
+
+#other-experiments .toolbar-labs {
+  background: url(https://web.archive.org/web/20101030220205im_/http://www.gstatic.com/labs/images/toolbar-20090603.gif) right center no-repeat;
+}
+#other-experiments .wave-labs {
+  background: url(https://web.archive.org/web/20101030220205im_/http://www.gstatic.com/labs/images/labs-wave-20100507.png) right center no-repeat;
+}
+#other-experiments .youtube-testtube {
+  background: url(https://web.archive.org/web/20101030220205im_/http://www.gstatic.com/labs/images/labs-youtube-20100125.png) right center no-repeat;
+}
+/*/
+#recent-labs-blog-posts li {
+  margin-bottom: 0.75em;
+}
+
+#meet-the-engineers .content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+#meet-the-engineers .content li {
+  zoom: 1;
+  clear: both;
+  padding: 0;
+  margin: 0 0 0.5em 0;
+}
+#meet-the-engineers .photo {
+  clear: both;
+  width: 50px;
+  text-align: center;
+  float: left;
+  margin-bottom: 8px;
+}
+#meet-the-engineers img {
+  margin: 0 auto;
+  border: 1px solid #666666;
+}
+#meet-the-engineers .desc {
+  margin-left: 50px;
+  padding-left: 0.45em;
+}
+#all-time-favorites ol,
+#related-experiments ol {
+  color: #666666;
+  padding: 0;
+  margin: 0;
+  margin-left: 2em;
+}
+#all-time-favorites li,
+#related-experiments li {
+  margin-bottom: 0.75em;
+}
+#experiments .desc,
+#all-time-favorites .desc,
+#related-experiments .desc {
+  color: black;
+}
+
+#try-out {
+  margin-top: 1em;
+}
+
+/* Main section */
+
+#main-with-sidebar p {
+  margin: 0.75em 0.45em;
+}
+
+#main-with-sidebar .sort {
+  float: right;
+  margin-top: -0.3em;
+  margin-right: 0.2em;
+  margin-bottom: -2em;
+}
+#main-with-sidebar .sort .selected {
+  color: black;
+  font-weight: bold;
+  text-decoration: none;
+}
+ul.experiments {
+  padding: 1em 1em 0.5em 0.5em;
+  margin: 0;
+  list-style: none;
+}
+ul.experiments li {
+  overflow: hidden;
+}
+ul.experiments img.thumbnail {
+  float: left;
+  width: 78px;
+  height: 78px;
+  margin-right: 0.75em;
+  margin-bottom: 1.2em;
+}
+ul.experiments .content {
+  margin-left: 80px;
+  padding-left: 0.75em;
+}
+ul.experiments .name {
+  font-size: 115%;
+  padding-bottom: 0.1em;
+}
+ul.experiments .last-updated {
+  font-size: 85%;
+  padding-top: 0.2em;
+  color: #666666;
+  margin-bottom: 1.2em;
+}
+ul.experiments .meta {
+  padding-top: 0.2em;
+  color: #666666;
+  margin-bottom: 1.2em;
+}
+ul.experiments .links a {
+  color: #7777cc;
+  white-space: nowrap;
+}
+
+ul.experiments .market a {
+  color: #7777cc;
+  white-space: nowrap;
+  float: right;
+}
+
+img.detail-thumbnail {
+  float: left;
+  width: 78px;
+  height: 78px;
+  margin-right: 0.75em;
+  margin-bottom: 0.75em;
+}
+
+#main-with-sidebar .desc ol {
+  list-style-position: inside;
+}
+
+#main-with-sidebar .desc ul {
+  list-style-position: inside;
+}
+
+#main-with-sidebar .meta {
+  color: #666666;
+}
+
+ul.last-updates {
+  margin: 0 0.45em;
+  padding: 0;
+  list-style: none;
+}
+ul.last-updates li {
+  margin-bottom: 0.25em;
+}
+
+.confidential {
+  color: #FF4444;
+  vertical-align: middle;
+  font-size: 75%;
+  padding: 0.15em;
+}
+
+.graduated {
+  color: #0B3B0B;
+  font-size: 75%;
+  padding: 0.15em;
+}
+
+.localized {
+  color: #0B3B0B;
+  font-size: 75%;
+  padding: 0.15em;
+}
+
+.not_localized {
+  color: grey;
+  font-size: 75%;
+  padding: 0.15em;
+}
+
+.not_localized a:link {
+  color: grey;
+  text-decoration: underline;
+}
+
+.not_localized a:visited {
+  color: grey;
+  text-decoration: underline;
+}
+
+/* Custom search results if we didn't find anything */
+#cse {
+  margin-left: .75em;
+  padding-right:0.5em;
+  display: none;
+}
+
+#no-results {
+  font-size: 120%;
+}
+
+#other-results {
+  font-size: 120%;
+  margin-top: 1.5em;
+  margin-bottom: 1.2em;
+}
+
+#try-elsewhere {
+  padding-left: 3px;
+}
+
+.gs-webResult {
+  margin-bottom: 1.2em;
+  margin-left: 0.75em;
+  margin-right: 0.45em;
+}
+/* Should be same as ul.experiments .name */
+.gs-webResult div.gs-title {
+  font-size: 115%;
+  padding-bottom: 0.1em;
+}
+.gs-webResult div.gs-visibleUrl-long {
+  width: 100%;
+  color: green;
+}
+.gs-webResult div.gs-visibleUrl-short {
+  width: 100%;
+  overflow: hidden;
+  display: none;
+}
+.gs-webResult div.gs-watermark {
+  width: 100%;
+  overflow: hidden;
+  display: none;
+}
+
+.gs-promotion {
+  margin-bottom: 1.2em;
+  margin-left: 0.5em;
+  margin-right: 0.45em;
+  padding: .75em;
+  border: solid 2px #336699;
+}
+/* Should be same as ul.experiments .name */
+.gs-promotion div.gs-title {
+  font-size: 115%;
+  padding-bottom: 0.1em;
+}
+.gs-promotion div.gs-visibleUrl-short {
+  width: 100%;
+  color: green;
+}
+.gs-promotion div.gs-watermark {
+  width: 100%;
+  overflow: hidden;
+  display: none;
+}
+/* override some defaults so that widget stars don't have borders */
+
+span.zzAggregateRating img.zzSmallStar,
+span.zzRatingEdit img {
+  border: none;
+}
+
+/* Spam/next links are "too blue", need "hand" icon on hover */
+div.zzCommentList span.zzReportSpamLink {
+  cursor: pointer;
+}
+div.zzCommentList div.zzCommentListNavLink {
+  cursor: pointer;
+}
+
+.not-ui-approved {
+  display: none;
+}
+
+/* comments */
+
+.warning {
+  color: red;
+}
+.helptext {
+  color: dimgray;
+}
+.comments {
+  padding: 0;
+}
+.comments .add {
+  margin-bottom: 1em;
+}
+.comments .comment {
+  margin-bottom: 0.75em;
+}
+.comments .title {
+  font-weight: bold;
+}
+.comments .meta {
+  color: #666666;
+}
+#comment-commands {
+  margin-bottom: 1em;
+}
+#add-comment-form {
+  display: none;
+  margin-bottom: 1em;
+}
+#add-comment-form table {
+  width: 100%;
+  margin-top: -0.5em;
+}
+#add-comment-form td {
+  padding: 0;
+  width: 50%;
+}
+#add-comment-form label {
+  display: block;
+  margin-top: 0.5em;
+  color: #666666;
+}
+#add-comment-form input,
+#add-comment-form textarea {
+  padding: 2px;
+  width: 98%;
+  border: 1px solid #999999;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+}
+#add-comment-form textarea {
+  height: 8em;
+}
+#add-comment-form button {
+  margin-top: 1em;
+}
+
+#add-comment-form .default {
+  font-weight: bold;
+}
+
+
+/* Button */
+
+.g-button *,
+.g-button-basic * {
+  margin:0;
+  padding:0
+}
+
+.g-button,
+.g-button-basic {
+  line-height:1.2;
+  text-align:center;
+  overflow:visible
+}
+
+.g-button div,
+.g-button-basic div {
+/*/
+  background:url(https://web.archive.org/web/20101030220205im_/http://www.google.com/images/modules/buttons/g-button-chocobo-1.gif) no-repeat;
+/*/
+  font-size:1.3em;
+  background-color:#5679a5
+}
+
+.g-button div span span a,
+.g-button-basic div span span a {
+  display:block;
+  color:#fff !important;
+/*/
+  background:url(https://web.archive.org/web/20101030220205im_/http://www.google.com/images/modules/buttons/g-button-chocobo-2.gif) no-repeat right bottom;
+/*/
+  padding:8px 18px 13px 13px;
+  text-decoration:none;
+  font-weight:bold
+}
+*html .g-button div span span a,
+*html .g-button-basic div span span a {
+  width:100%
+}
+.g-button div span,
+.g-button-basic div span {
+  display:block;
+  /*/
+  background:url(https://web.archive.org/web/20101030220205im_/http://www.google.com/images/modules/buttons/g-button-chocobo-1.gif) no-repeat right -400px;
+  /*/
+  height:1%
+}
+/*/
+.g-button div span span {
+  background:url(https://web.archive.org/web/20101030220205im_/http://www.google.com/images/modules/buttons/g-button-chocobo-1.gif) no-repeat left bottom
+
+}
+/*/
+.g-button p,
+.g-button-basic p {
+  text-align:center;
+  margin:10px 0 0
+}
+.g-button-basic {
+  padding:0;
+  background:none; border:none
+}
+/*/
+.g-button-basic div {
+
+  background:url(https://web.archive.org/web/20101030220205im_/http://www.google.com/images/modules/buttons/g-button-chocobo-basic-1.gif) no-repeat
+
+}
+.g-button-basic div span span a {
+
+  background:url(https://web.archive.org/web/20101030220205im_/http://www.google.com/images/modules/buttons/g-button-chocobo-basic-2.gif) no-repeat right bottom
+
+}
+.g-button-basic div span {
+
+  background:url(https://web.archive.org/web/20101030220205im_/http://www.google.com/images/modules/buttons/g-button-chocobo-basic-1.gif) no-repeat right -400px
+
+}
+.g-button-basic div span span {
+ 
+  background:url(https://web.archive.org/web/20101030220205im_/http://www.google.com/images/modules/buttons/g-button-chocobo-basic-1.gif) no-repeat left bottom
+}
+
+  
+.asphalt0 {
+
+  background-image: url(https://web.archive.org/web/20101030220205im_/http://asphalt-lake.appspot.com/) left center no-repeat;
+}
+/*/
+  
+
+</style>
+
+<link rel="icon" href=""/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <!--
+<script type="text/javascript">window.google={kEI:"YkrZSNnqLYKUsQPV2rDmDA",kEXPI:"17259,17735,18167,18779",kHL:"en"};
+  google.x=function(e,g){google.y[e.id]=[e,g];return false};window.rwt=function(b,d,e,g,h,f,i){var a=encodeURIComponent||escape,c=b.href.split("#");b.href="/url?sa=t\x26source\x3dweb"+(d?"&oi="+a(d):"")+(e?"&cad="+a(e):"")+"&ct="+a(g)+"&cd="+a(h)+"&url="+a(c[0]).replace(/\+/g,"%2B")+"&ei=YkrZSNnqLYKUsQPV2rDmDA"+(f?"&usg="+f:"")+i+(c[1]?"#"+c[1]:"");b.onmousedown="";return true};
+  window.gbar={};(function(){var b=window.gbar,f,h;b.qs=function(a){var c=window.encodeURIComponent&&(document.forms[0].q||"").value;if(c)a.href=a.href.replace(/([?&])q=[^&]*|$/,function(i,g){return(g||"&")+"q="+encodeURIComponent(c)})};function j(a,c){a.visibility=h?"hidden":"visible";a.left=c+"px"}b.tg=function(a){a=a||window.event;var c=0,i,g=window.navExtra,d=document.getElementById("gbi"),e=a.target||a.srcElement;a.cancelBubble=true;if(!f){f=document.createElement(Array.every||window.createPopup?"iframe":"div");f.frameBorder="0";f.src="#";d.parentNode.appendChild(f).id="gbs";if(g)for(i in g)d.insertBefore(g[i],d.firstChild).className="gb2";document.onclick=b.close}if(e.className!="gb3")e=e.parentNode;do c+=e.offsetLeft;while(e=e.offsetParent);j(d.style,c);f.style.width=d.offsetWidth+"px";f.style.height=d.offsetHeight+"px";j(f.style,c);h=!h};b.close=function(a){h&&b.tg(a)}})();</script>-->
+
+
+<script type="text/javascript">
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-4569244-3']);
+_gaq.push(['_setDomainName', 'none']);
+_gaq.push(['_setAllowLinker', true]);
+_gaq.push(['_trackPageview']);
+/*/
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://web.archive.org/web/20101030220205/https://ssl' : 'https://web.archive.org/web/20101030220205/http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+/*/
+</script>
+
+
+    
+<style type="text/css">
+.rate-experiment {
+  padding: 0 0.45em;
+  margin-bottom: 1em;
+}
+.rate-experiment * {
+  vertical-align: top;
+}
+#commentThreadNode div.zzCommentThreadGadget,
+#commentThreadNode div.zzCodeCommentThreadGadget,
+#commentThreadNode div.zzCommentList {
+  background: #fff;
+}
+#commentThreadNode div.zzCommentThreadSeparator {
+  border-bottom-color: #c9d7f1;
+}
+#commentThreadNode div.zzCommentThreadGadget {
+  padding: 0;
+}
+#commentThreadNode div.zzCommentList {
+  padding: 0 0.45em;
+}
+#commentThreadNode div.zzCommentDisplay {
+  border-bottom: 0;
+}
+#commentThreadNode .zzCommentDisplayTimestampSpamLink {
+  display: inline;
+}
+#commentThreadNode .zzCommentDisplayAuthorName {
+  color: black !important;
+  font-weight: bold;
+}
+#commentThreadNode .zzCommentDisplayTimestamp {
+  color: #666666;
+}
+#commentThreadNode .zzTextEditorReadOnly {
+  padding: 0.2em 0;
+}
+#commentThreadNode .zzCommentPoster {
+  padding: 0.5em 0.45em;
+}
+#commentThreadNode .zzCommentListLoading {
+  font-size: 100%;
+  color: #666666;
+}
+#commentThreadNode textarea.zzTextEditor {
+  border: 1px solid #c9d7f1;
+  padding: 4px;
+  width: 97%;
+  height: 6em;
+  font-size: 100%;
+}
+#commentThreadNode .zzCommentListPagination {
+  float: none;
+  border: 0;
+  padding: 0;
+  background: 0;
+}
+#commentThreadNode .zzCommentListPagination div {
+  display: inline;
+  float: none;
+}
+</style>
+
+</head>
+
+ 
+<!--
+<div id="gbar">
+  <nobr>
+    <a class="gb1" href="https://web.archive.org/web/20101030220205/http://www.google.com/">Web</a>
+    <a class="gb1" onclick="gbar.qs(this)" href="https://web.archive.org/web/20101030220205/http://images.google.com/">Images</a>
+    <a class="gb1" onclick="gbar.qs(this)" href="https://web.archive.org/web/20101030220205/http://maps.google.com/">Maps</a>
+    <a class="gb1" onclick="gbar.qs(this)" href="https://web.archive.org/web/20101030220205/http://news.google.com/">News</a>
+    <a class="gb1" onclick="gbar.qs(this)" href="https://web.archive.org/web/20101030220205/http://video.google.com/">Video</a>
+    <a class="gb1" href="https://web.archive.org/web/20101030220205/http://mail.google.com/">Mail</a>
+    <a class="gb3" onclick="this.blur();gbar.tg(event);return !1" href="https://web.archive.org/web/20101030220205/http://www.google.com/intl/en/options/"><u>more</u> <small>&#9660;</small></a>
+    <div id="gbi">
+      <a></a> <a class="gb2" onclick="gbar.qs(this)" href="https://web.archive.org/web/20101030220205/http://www.google.com/prdhp">Shopping</a> <a href="https://web.archive.org/web/20101030220205/http://groups.google.com/" onclick="gbar.qs(this)" class="gb2">Groups</a> <a href="https://web.archive.org/web/20101030220205/http://books.google.com/books" onclick="gbar.qs(this)" class="gb2">Books</a> <a href="https://web.archive.org/web/20101030220205/http://scholar.google.com/" onclick="gbar.qs(this)" class="gb2">Scholar</a> <a href="https://web.archive.org/web/20101030220205/http://finance.google.com/" onclick="gbar.qs(this)" class="gb2">Finance</a> <a href="https://web.archive.org/web/20101030220205/http://blogsearch.google.com/" onclick="gbar.qs(this)" class="gb2">Blogs</a> <div class="gb2"><div class="gbd"></div></div><a href="https://web.archive.org/web/20101030220205/http://www.youtube.com/" onclick="gbar.qs(this)" class="gb2">YouTube</a> <a href="https://web.archive.org/web/20101030220205/http://www.google.com/calendar/" class="gb2">Calendar</a> <a href="https://web.archive.org/web/20101030220205/http://picasaweb.google.com/" onclick="gbar.qs(this)" class="gb2">Photos</a> <a href="https://web.archive.org/web/20101030220205/http://docs.google.com/" class="gb2">Documents</a> <a href="https://web.archive.org/web/20101030220205/http://www.google.com/reader/" class="gb2">Reader</a> <a href="https://web.archive.org/web/20101030220205/http://sites.google.com/" class="gb2">Sites</a> <div class="gb2"><div class="gbd"></div></div><a href="https://web.archive.org/web/20101030220205/http://www.google.com/intl/en/options/" class="gb2">even more &raquo;</a></div></nobr></div>
+<div class="gbh" style="left:0;"></div>
+<div class="gbh" style="right:0;"></div>
+<p id="gb">
+-->
+  
+    
+  
+<!--  <a href="https://web.archive.org/web/20101030220205/https://www.google.com/accounts/ServiceLogin?service=ah&amp;continue=http://www.googlelabs.com/_ah/login%3Fcontinue%3Dhttp://www.googlelabs.com/&amp;ltmpl=&amp;sig=ebe23e5ddf1b3b16ae18fe579c07d782">Sign in</a></p>
+<div id="g-hdr">
+  <form action="/web/20101030220205/http://www.googlelabs.com/" method="get" name="">
+    <span id="g-hdr-logo">
+      <a href="/web/20101030220205/http://www.googlelabs.com/">-->
+        <a><img src="logo.gif" alt="logo" height="50" width="170"/><h2>Labs</h2></a></span>
+<!--    <span id="g-hdr-q">
+      <input title="Search" value="" maxlength="2048" size="40" name="q" type="text"/><input value="Search Labs" name="apps" type="submit"/><input value="Search the Web" name="web" type="submit"/>
+      <span id="popular">&nbsp;
+        </span><span id="g-hdr-q-mod"><img src="https://web.archive.org/web/20101030220205im_/http://www.gstatic.com/labs/images/blank.gif" alt=""/></span></span></form></div>
+
+        <div id="g-hdr-notes">
+          &nbsp;</div>-->
+        
+
+
+    
+<!--   
+<div id="left-sidebar">
+  
+<ul id="sections">
+  <li class="selected">
+    <a href="/web/20101030220205/http://www.googlelabs.com/" <span class="name">All (46)</span></a></li>
+  
+    <li>
+      <a href="/web/20101030220205/http://www.googlelabs.com/?tags=android">
+        <span class="name">Android (15)</span></a></li>
+  
+    <li>
+      <a href="/web/20101030220205/http://www.googlelabs.com/?tags=apps">
+        <span class="name">Apps (7)</span></a></li>
+  
+    <li>
+      <a href="/web/20101030220205/http://www.googlelabs.com/?tags=communication">
+        <span class="name">Communication (4)</span></a></li>
+  
+    <li>
+      <a href="/web/20101030220205/http://www.googlelabs.com/?tags=maps">
+        <span class="name">Maps (9)</span></a></li>
+  
+    <li>
+      <a href="/web/20101030220205/http://www.googlelabs.com/?tags=search">
+        <span class="name">Search (15)</span></a></li>
+  
+  
+    <li>
+      <a href="/web/20101030220205/http://www.googlelabs.com/?other_tags=true">
+        <span class="name">Other (8)</span></a></li>
+  
+  
+</ul>
+
+
+  
+  <h2>Language</h2>
+  
+<form action="/web/20101030220205/http://www.googlelabs.com/choose_language" id="choose_language" method="post">
+  <select name="language" onchange="document.getElementById('choose_language').submit()">
+    
+    <option value="de">Deutsch</option>
+    
+    <option value="en_us" selected>English (US)</option>
+    
+    <option value="es">español</option>
+    
+    <option value="fr">Français</option>
+    
+    <option value="it">Italiano</option>
+    
+    <option value="nl">Nederlands</option>
+    
+    <option value="pt">Portuguese</option>
+    
+    <option value="ru">русский</option>
+    
+    <option value="zh_tw">中文 (台灣)</option>
+    
+    <option value="ja">日本語</option>
+    
+    <option value="zh_cn">简体中文</option>
+    
+    <option value="ko">한국어</option>
+    </select></form>
+  -->
+    <p>welcome to retrojcity labs. these projects that i'm working on, but haven't fully baked it in yet. whether it's for the site or not. </p>
+
+   <!-- <h2>Stay informed</h2>
+<ul class="subscribe">
+    <li class="rss">
+      <a href="/web/20101030220205/http://www.googlelabs.com/rss?hl=en_us"><span class="name">RSS</span></a></li>
+    <li class="igoogle">
+      <a href="https://web.archive.org/web/20101030220205/http://www.google.com/ig/directory?type=gadgets&amp;url=www.googlelabs.com/gadget_spec.xml?hl=en_us" target="_new"><span class="name">iGoogle gadget</span></a></li></ul></div>
+
+    <div id="right-sidebar">
+      
+      <div class="section" id="other-experiments">-->
+<!--    
+<h2 class="topbar">Other experiments at Google</h2>
+<ul>
+  
+  <li class="cal-labs">
+    <a href="https://web.archive.org/web/20101030220205/http://www.google.com/calendar/render?settings=4">Calendar Labs</a>
+    <div class="meta">
+      Latest ideas from the Calendar team</div></li>
+  <li class="gmail-labs">
+    <a href="https://web.archive.org/web/20101030220205/http://mail.google.com/mail/?ui=2&amp;fs=1&amp;view=pu&amp;st=labs">Gmail Labs</a>
+    <div class="meta">
+      Dozens of Gmail experiments</div></li>
+  <li class="code-labs">
+    <a href="https://web.archive.org/web/20101030220205/http://code.google.com/labs">Google Code Labs</a>
+    <div class="meta">
+      Experimental developer products</div></li>
+  <li class="maps-labs">
+    <a href="https://web.archive.org/web/20101030220205/http://maps.google.com/maps?showlabs=1">Google Maps Labs</a>
+    <div class="meta">
+      Experimental Maps features</div></li>
+  <li class="wave-labs">
+    <a href="https://web.archive.org/web/20101030220205/http://wave.google.com/">Google Wave</a>
+    <div class="meta">
+      Real-time communication and collaboration</div></li>
+  <li class="experimental-search">
+    <a href="https://web.archive.org/web/20101030220205/http://www.google.com/experimental/">Search Experiments</a>
+    <div class="meta">
+      Alternate search views and more</div></li>
+  <li class="toolbar-labs">
+    <a href="https://web.archive.org/web/20101030220205/http://toolbar.google.com/labs/intl/en/index.html">Toolbar Labs</a> (IE only)
+    <div class="meta">
+      Language and location-based experiments</div></li>
+  <li class="youtube-testtube">
+    <a href="https://web.archive.org/web/20101030220205/http://www.youtube.com/testtube">YouTube TestTube</a>
+    <div class="meta">
+      YouTube's ideas incubator</div></li></ul>
+</div>
+-->
+      <div class="section" id="meet-the-engineers">
+<!--
+<h2 class="topbar">Meet the engineers</h2>
+<div class="content">
+  <ul> 
+    <li>
+      <div class="photo">
+        
+        <img src="https://web.archive.org/web/20101030220205im_/http://www.gstatic.com/labs/images/engineers/arthur-20091013.png" alt="Photograph of Arthur Gleckler"/>
+        </div>
+      <div class="desc">
+        
+        <strong>Arthur Gleckler</strong>
+        <br/>
+        
+        Built infrastructure for <a href="https://web.archive.org/web/20101030220205/http://www.googlelabs.com/">Google Labs</a>. Helps Googlers put their creations into the hands of Google users around the world.
+        </div></li>
+    
+    <li>
+      <div class="photo">
+        
+        <img src="https://web.archive.org/web/20101030220205im_/http://www.gstatic.com/labs/images/engineers/pablo-20091008.png" alt="Photograph of David Pablo Cohn"/>
+        </div>
+      <div class="desc">
+        
+        <strong>David Pablo Cohn</strong>
+        <br/>
+        
+        Helped build <a href="https://web.archive.org/web/20101030220205/http://www.googlelabs.com/">Google Labs</a>. Learning to teach engineers to teach machines to learn.
+        </div></li>
+    
+    <li>
+      <div class="photo">
+        
+        <img src="https://web.archive.org/web/20101030220205im_/http://www.gstatic.com/labs/images/engineers/dpetrou-20100610.png" alt="Photograph of David Petrou"/>
+        </div>
+      <div class="desc">
+        
+        <strong>David Petrou</strong>
+        <br/>
+        
+        Worked on <a href="https://web.archive.org/web/20101030220205/http://www.google.com/mobile/goggles">Google Goggles</a>, the visual cortex of the Internet.
+        </div></li>
+    
+    <li>
+      <div class="photo">
+        
+        <img src="https://web.archive.org/web/20101030220205im_/http://www.gstatic.com/labs/images/engineers/jhebert-20090605.png" alt="Photograph of Jack Hebert"/>
+        </div>
+      <div class="desc">
+        
+        <strong>Jack Hebert</strong>
+        <br/>
+        
+        Worked on <a href="https://web.archive.org/web/20101030220205/http://labs.google.com/inquotes/">In Quotes</a>. Jack won't rest until Google News finds the news before it happens.
+        </div></li>
+    
+    <li>
+      <div class="photo">
+        
+        <img src="https://web.archive.org/web/20101030220205im_/http://www.gstatic.com/labs/images/engineers/eldawy-20100610.png" alt="Photograph of Mohamed Eldawy"/>
+        </div>
+      <div class="desc">
+        
+        <strong>Mohamed Eldawy</strong>
+        <br/>
+        
+        Worked on <a href="https://web.archive.org/web/20101030220205/http://tashkeel.googlelabs.com/">Tashkeel</a>. Mohamed likes all Unicode characters equally.
+        </div></li>
+    </ul></div>
+</div>
+      <div class="section" id="all-time-favorites">
+        
+<h2 class="topbar">All-time favorites</h2>
+<ol>
+
+  <li><a href="https://web.archive.org/web/20101030220205/http://labs.google.com/sets">Google Sets</a>
+    <div class="meta">
+      <span class="desc">Automatically create sets of items from a few examples.</span>
+      -
+      <a class="more" href="/web/20101030220205/http://www.googlelabs.com/show_details?app_key=agtnbGFiczIwLXd3d3ITCxIMTGFic0FwcE1vZGVsGIYxDA">Details&nbsp;&raquo;</a></div></li>
+  
+  <li><a href="https://web.archive.org/web/20101030220205/http://www.google.com/trends">Google Trends</a>
+    <div class="meta">
+      <span class="desc">See what the world is searching for. 
+
+Google Trends allows you to enter up to five topics and see how often they’ve been searched on Google over time. </span>
+      -
+      <a class="more" href="/web/20101030220205/http://www.googlelabs.com/show_details?app_key=agtnbGFiczIwLXd3d3ITCxIMTGFic0FwcE1vZGVsGPcwDA">Details&nbsp;&raquo;</a></div></li>
+  </ol>-->
+</div></div>
+    <div id="main-with-sidebar">
+<h1 class="experiments">
+    Experiments
+</h1>
+<div class="sort">
+  <!--
+  <a href="/web/20101030220205/http://www.googlelabs.com/?sort_by=last_updated">Being Worked On.</a>
+  &nbsp;
+  <span class="selected">Shelved.</span>
+  &nbsp;
+  <span class="selected">Canceled.</span>
+  </div>
+  -->
+<ul class="experiments">
+  
+  <li>
+    <a href="https://GlitchyZorua.neocities.org">    
+    <img class="thumbnail" src="github.png" alt="Thumbnail"/>
+    
+  
+    <div class="content">
+      <h2 class="app">
+      <div class="name">
+        
+        <a href="https://GlitchyZorua.github.io">
+        
+          GitHub Sites Mirror</a>
+        
+        
+        
+        
+        
+        
+        </div>
+    </h2>
+      <div class="desc">
+      A backup for this site. May not be stable.
+      </div>
+      <div class="meta">
+        <span class="date" style="padding-right:8px">December 3, 2023</span>
+        <span class="links">
+          <a href="lite.html">
+          Switch!</a></span>
+    </div></div></li>
+  
+  <li>
+    <a href="lite.html">
+    
+    <img class="thumbnail" src="lite.png" alt="Thumbnail"/>
+    
+    </a>
+    <div class="content">
+      <h2 class="app">
+      <div class="name">
+        
+        <a href="lite.html">Lite</a></div>
+    </h2>
+      <div class="desc">
+      Lite version of RetroJCity. Little to no Javascript. No easter eggs or jokes, no clock, nothing. only a search engine.
+      </a>
+      </div><div class="meta">
+        <span class="date" style="padding-right:8px">December 3, 2023</span>
+        
+        
+        <span class="links">
+          <a href="lite.html">
+          Try it!</a></span>
+        
+    </div></div></li>
+  
+  <li
+    <a href="https://github.com/GlitchyZorua/RetroJBOT-TS">
+    
+    <img class="thumbnail" src="retrojbot.webp" alt="Thumbnail"/>
+    
+  </a>
+    <div class="content">
+      <h2 class="app">
+      <div class="name">
+        
+        <a href="https://github.com/GlitchyZorua/RetroJBOT-TS">
+        A full fledge Discord Bot. Being rewritten in TypeScript.
+          </a>
+        
+        
+        
+        
+        
+        
+        </div>
+    </h2>
+      <div class="desc"></div>
+      <div class="meta">
+        <span class="date" style="padding-right:8px">2022</span>
+    
+        
+        <span class="links">
+          <a href="https://github.com/GlitchyZorua/RetroJBOT-TS">
+            Details and feedback &raquo;</a></span>
+        
+    </div></div></li>
+  <!---
+  <li>
+    <a href="https://web.archive.org/web/20101030220205/http://eyes-free.blogspot.com/2010/10/walking-about-with-talking-android.html">
+    
+    <img class="thumbnail" src="/web/20101030220205im_/http://www.googlelabs.com/show_app_thumbnail?app_key=agtnbGFiczIwLXd3d3IVCxIMTGFic0FwcE1vZGVsGLGztwIM" alt="Thumbnail"/>
+    
+    </a>
+    <div class="content">
+      <h2 class="app">
+      <div class="name">
+        
+        <a href="https://web.archive.org/web/20101030220205/http://eyes-free.blogspot.com/2010/10/walking-about-with-talking-android.html">
+        
+          WalkyTalky</a>
+        
+        
+        
+        
+        
+        
+        </div>
+    </h2>
+      <div class="desc">
+        Eyes-free accessible navigation aid for Android.</div>
+      <div class="meta">
+        <span class="date" style="padding-right:8px">October 8, 2010</span>
+        
+        <span class="rating" style="padding-right:8px" g:type="AverageStarRating" g:inline="true" g:entity.url="http://eyes-free.blogspot.com/2010/10/walking-about-with-talking-android.html"></span>
+        <span class="rating" style="padding-right:8px" g:type="NumRatings" g:inline="true" g:entity.url="http://eyes-free.blogspot.com/2010/10/walking-about-with-talking-android.html"></span>
+        
+        
+        <span class="links">
+          <a href="/web/20101030220205/http://www.googlelabs.com/show_details?app_key=agtnbGFiczIwLXd3d3IVCxIMTGFic0FwcE1vZGVsGLGztwIM">
+            Details and feedback &raquo;</a></span>
+        
+    </div></div></li>
+  
+  <li>
+    <a href="https://web.archive.org/web/20101030220205/http://eyes-free.blogspot.com/2010/10/walking-about-with-talking-android.html">
+    
+    <img class="thumbnail" src="/web/20101030220205im_/http://www.googlelabs.com/show_app_thumbnail?app_key=agtnbGFiczIwLXd3d3IVCxIMTGFic0FwcE1vZGVsGIHDtwIM" alt="Thumbnail"/>
+    
+    </a>
+    <div class="content">
+      <h2 class="app">
+      <div class="name">
+        
+        <a href="https://web.archive.org/web/20101030220205/http://eyes-free.blogspot.com/2010/10/walking-about-with-talking-android.html">
+        
+          Intersection Explorer</a>
+        
+        
+        
+        
+        
+        
+        </div>
+    </h2>
+      <div class="desc">
+        Android app that provides a virtual map of your surroundings that can be explored eyes-free.</div>
+      <div class="meta">
+        <span class="date" style="padding-right:8px">October 8, 2010</span>
+        
+        <span class="rating" style="padding-right:8px" g:type="AverageStarRating" g:inline="true" g:entity.url="http://eyes-free.blogspot.com/2010/10/walking-about-with-talking-android.html"></span>
+        <span class="rating" style="padding-right:8px" g:type="NumRatings" g:inline="true" g:entity.url="http://eyes-free.blogspot.com/2010/10/walking-about-with-talking-android.html"></span>
+        
+        
+        <span class="links">
+          <a href="/web/20101030220205/http://www.googlelabs.com/show_details?app_key=agtnbGFiczIwLXd3d3IVCxIMTGFic0FwcE1vZGVsGIHDtwIM">
+            Details and feedback &raquo;</a></span>
+        
+    </div></div></li>
+  
+  <li>
+    <a href="https://web.archive.org/web/20101030220205/http://breadcrumb.googlelabs.com/">
+    
+    <img class="thumbnail" src="/web/20101030220205im_/http://www.googlelabs.com/show_app_thumbnail?app_key=agtnbGFiczIwLXd3d3IVCxIMTGFic0FwcE1vZGVsGNHYtQIM" alt="Thumbnail"/>
+    
+    </a>
+    <div class="content">
+      <h2 class="app">
+      <div class="name">
+        
+        <a href="https://web.archive.org/web/20101030220205/http://breadcrumb.googlelabs.com/">
+        
+          Google Breadcrumb</a>
+        
+        
+        
+        
+        
+        
+        </div>
+    </h2>
+      <div class="desc">
+        Create an easy-to-use mobile learning application without any programming experience.</div>
+      <div class="meta">
+        <span class="date" style="padding-right:8px">September 24, 2010</span>
+        
+        <span class="rating" style="padding-right:8px" g:type="AverageStarRating" g:inline="true" g:entity.url="http://breadcrumb.googlelabs.com/"></span>
+        <span class="rating" style="padding-right:8px" g:type="NumRatings" g:inline="true" g:entity.url="http://breadcrumb.googlelabs.com/"></span>
+        
+        
+        <span class="links">
+          <a href="/web/20101030220205/http://www.googlelabs.com/show_details?app_key=agtnbGFiczIwLXd3d3IVCxIMTGFic0FwcE1vZGVsGNHYtQIM">
+            Details and feedback &raquo;</a></span>
+        
+    </div></div></li>
+  
+  <li>
+    <a href="https://web.archive.org/web/20101030220205/http://appinventor.googlelabs.com/">
+    
+    <img class="thumbnail" src="/web/20101030220205im_/http://www.googlelabs.com/show_app_thumbnail?app_key=agtnbGFiczIwLXd3d3IUCxIMTGFic0FwcE1vZGVsGPOaIgw" alt="Thumbnail"/>
+    
+    </a>
+    <div class="content">
+      <h2 class="app">
+      <div class="name">
+        
+        <a href="https://web.archive.org/web/20101030220205/http://appinventor.googlelabs.com/">
+        
+          App Inventor for Android</a>
+        
+        
+        
+        
+        
+        
+        </div>
+    </h2>
+      <div class="desc">
+        App Inventor is the easiest way to create apps for your phone! App Inventor is built on the idea that you do not need to be a developer to build great mobile applications. Instead of code, App Inventor allows you to visually design applications and use blocks to specify application logic.</div>
+      <div class="meta">
+        <span class="date" style="padding-right:8px">July 12, 2010</span>
+        
+        <span class="rating" style="padding-right:8px" g:type="AverageStarRating" g:inline="true" g:entity.url="http://appinventor.googlelabs.com/"></span>
+        <span class="rating" style="padding-right:8px" g:type="NumRatings" g:inline="true" g:entity.url="http://appinventor.googlelabs.com/"></span>
+        
+        
+        <span class="links">
+          <a href="/web/20101030220205/http://www.googlelabs.com/show_details?app_key=agtnbGFiczIwLXd3d3IUCxIMTGFic0FwcE1vZGVsGPOaIgw">
+            Details and feedback &raquo;</a></span>
+        
+    </div></div></li>
+  
+  <li>
+    <a href="https://web.archive.org/web/20101030220205/http://image-swirl.googlelabs.com/">
+    
+    <img class="thumbnail" src="/web/20101030220205im_/http://www.googlelabs.com/show_app_thumbnail?app_key=agtnbGFiczIwLXd3d3ITCxIMTGFic0FwcE1vZGVsGMopDA" alt="Thumbnail"/>
+    
+    </a>
+    <div class="content">
+      <h2 class="app">
+      <div class="name">
+        
+        <a href="https://web.archive.org/web/20101030220205/http://image-swirl.googlelabs.com/">
+        
+          Image Swirl</a>
+        
+        
+        
+        
+        
+        
+        </div>
+    </h2>
+      <div class="desc">
+        Google Image Swirl organizes image search results based on their visual and semantic similarity and presents them in an intuitive exploratory interface.   </div>
+      <div class="meta">
+        <span class="date" style="padding-right:8px">November 15, 2009</span>
+        
+        <span class="rating" style="padding-right:8px" g:type="AverageStarRating" g:inline="true" g:entity.url="http://image-swirl.googlelabs.com/"></span>
+        <span class="rating" style="padding-right:8px" g:type="NumRatings" g:inline="true" g:entity.url="http://image-swirl.googlelabs.com/"></span>
+        
+        
+        <span class="links">
+          <a href="/web/20101030220205/http://www.googlelabs.com/show_details?app_key=agtnbGFiczIwLXd3d3ITCxIMTGFic0FwcE1vZGVsGMopDA">
+            Details and feedback &raquo;</a></span>
+        
+    </div></div></li>
+  
+  <li>
+    <a href="https://web.archive.org/web/20101030220205/http://www.google.com/reader/play">
+    
+    <img class="thumbnail" src="/web/20101030220205im_/http://www.googlelabs.com/show_app_thumbnail?app_key=agtnbGFiczIwLXd3d3IVCxIMTGFic0FwcE1vZGVsGPG3vgEM" alt="Thumbnail"/>
+    
+    </a>
+    <div class="content">
+      <h2 class="app">
+      <div class="name">
+        
+        <a href="https://web.archive.org/web/20101030220205/http://www.google.com/reader/play">
+        
+          Google Reader Play</a>
+        
+        
+        
+        
+        
+        
+        </div>
+    </h2>
+      <div class="desc">
+        Google Reader Play is a fun, fast way to browse the most interesting items on the web, personalized just for you.</div>
+      <div class="meta">
+        <span class="date" style="padding-right:8px">March 10, 2010</span>
+        
+        <span class="rating" style="padding-right:8px" g:type="AverageStarRating" g:inline="true" g:entity.url="http://www.google.com/reader/play"></span>
+        <span class="rating" style="padding-right:8px" g:type="NumRatings" g:inline="true" g:entity.url="http://www.google.com/reader/play"></span>
+        
+        
+        <span class="links">
+          <a href="/web/20101030220205/http://www.googlelabs.com/show_details?app_key=agtnbGFiczIwLXd3d3IVCxIMTGFic0FwcE1vZGVsGPG3vgEM">
+            Details and feedback &raquo;</a></span>
+        
+    </div></div></li>
+  
+  <li>
+    <a href="https://web.archive.org/web/20101030220205/http://www.google.com/fusiontables">
+    
+    <img class="thumbnail" src="/web/20101030220205im_/http://www.googlelabs.com/show_app_thumbnail?app_key=agtnbGFiczIwLXd3d3ITCxIMTGFic0FwcE1vZGVsGK0pDA" alt="Thumbnail"/>
+    
+    </a>
+    <div class="content">
+      <h2 class="app">
+      <div class="name">
+        
+        <a href="https://web.archive.org/web/20101030220205/http://www.google.com/fusiontables">
+        
+          Fusion Tables</a>
+        
+        
+           &nbsp; <span class="graduated">Graduated</span>
+        
+        
+        
+        
+        
+        </div>
+    </h2>
+      <div class="desc">
+        A service for managing large collections of tabular data in the cloud.  </div>
+      <div class="meta">
+        <span class="date" style="padding-right:8px">September 17, 2010</span>
+        
+        <span class="rating" style="padding-right:8px" g:type="AverageStarRating" g:inline="true" g:entity.url="http://www.google.com/fusiontables"></span>
+        <span class="rating" style="padding-right:8px" g:type="NumRatings" g:inline="true" g:entity.url="http://www.google.com/fusiontables"></span>
+        
+        
+        <span class="links">
+          <a href="/web/20101030220205/http://www.googlelabs.com/show_details?app_key=agtnbGFiczIwLXd3d3ITCxIMTGFic0FwcE1vZGVsGK0pDA">
+            Details and feedback &raquo;</a></span>
+        
+    </div></div></li>
+  </ul>-->
+
+
+
+
+<!--
+
+<br clear="all"/>
+<table id="nav" align="center" style="border-collapse:collapse;margin:auto;text-align:center;direction:ltr;margin-bottom:1.4em">
+  <tr valign="top">
+    
+    <td class="b"><span class="csb ch" style="background-position:-26px 0;width:18px"></span><td>
+    
+    
+    
+    <td class="cur"><span class="csb" style="background-position:-44px 0;width:16px"></span>1</td>
+    
+    
+    
+    <td><a href="/web/20101030220205/http://www.googlelabs.com/?sort_by=popularity&amp;start=10"><span class="csb ch" style="background-position:-60px 0;width:16px"></span>2</a></td>
+    
+    
+    
+    <td><a href="/web/20101030220205/http://www.googlelabs.com/?sort_by=popularity&amp;start=20"><span class="csb ch" style="background-position:-60px 0;width:16px"></span>3</a></td>
+    
+    
+    
+    <td><a href="/web/20101030220205/http://www.googlelabs.com/?sort_by=popularity&amp;start=30"><span class="csb ch" style="background-position:-60px 0;width:16px"></span>4</a></td>
+    
+    
+    
+    <td><a href="/web/20101030220205/http://www.googlelabs.com/?sort_by=popularity&amp;start=40"><span class="csb ch" style="background-position:-60px 0;width:16px"></span>5</a></td>
+    
+    
+    
+    <td><a href="/web/20101030220205/http://www.googlelabs.com/?sort_by=popularity&amp;start=50"><span class="csb ch" style="background-position:-60px 0;width:16px"></span>6</a></td>
+    
+    
+    
+    <td><a href="/web/20101030220205/http://www.googlelabs.com/?sort_by=popularity&amp;start=60"><span class="csb ch" style="background-position:-60px 0;width:16px"></span>7</a></td>
+    
+    
+    
+    
+    <td class="b"><a href="/web/20101030220205/http://www.googlelabs.com/?start=10&amp;sort_by=popularity"><span class="csb ch" style="background-position:-76px 0;margin-right:34px;width:66px"></span>Next</a></td>
+    </table>
+
+
+</div>
+    
+<div id="footer">
+  <a href="https://web.archive.org/web/20101030220205/http://www.google.com/" id="gHome">Google&nbsp;Home</a>
+  - <a href="https://web.archive.org/web/20101030220205/http://www.google.com/ads">Advertising&nbsp;Programs</a>
+  - <a href="https://web.archive.org/web/20101030220205/http://www.google.com/services">Business&nbsp;Solutions</a>
+  - <a href="https://web.archive.org/web/20101030220205/http://www.google.com/intl/en/privacy.html">Privacy</a>
+  - <a href="https://web.archive.org/web/20101030220205/http://www.google.com/accounts/TOS">Terms&nbsp;of&nbsp;Service</a>
+  - <a href="https://web.archive.org/web/20101030220205/http://www.google.com/about.html">About&nbsp;Google</a></div>
+    
+<script type="text/javascript" src="https://web.archive.org/web/20101030220205js_/http://www.google.com/reviews/scripts/annotations_bootstrap.js?appid=72&amp;hl=en-us"></script>
+
+    <script type="text/javascript">
+      if(window.jstiming){window.jstiming.a={};window.jstiming.c=1;var j=function(a,c,e){var b=a.t[c],g=a.t.start;if(b&&(g||e)){b=a.t[c][0];g=e!=undefined?e:g[0];return b-g}};window.jstiming.setTimerName=function(a,c){a.name=c};var n=function(a,c,e){var b="";if(window.jstiming.pt){b+="&srt="+window.jstiming.pt;delete window.jstiming.pt}try{if(window.external&&window.external.tran)b+="&tran="+window.external.tran;else if(window.gtbExternal&&window.gtbExternal.tran)b+="&tran="+window.gtbExternal.tran();else if(window.chrome&&
+window.chrome.csi)b+="&tran="+window.chrome.csi().tran}catch(g){}var d=window.chrome;if(d)if(d=d.loadTimes){if(d().wasFetchedViaSpdy)b+="&p=s";if(d().wasNpnNegotiated)b+="&npn=1";if(d().wasAlternateProtocolAvailable)b+="&apa=1"}if(a.b)b+="&"+a.b;d=a.t;var m=d.start,k=[],h=[],f;for(f in d)if(f!="start")if(f.indexOf("_")!=0){var i=d[f][1];if(i)d[i]&&h.push(f+"."+j(a,f,d[i][0]));else m&&k.push(f+"."+j(a,f))}delete d.start;if(c)for(var l in c)b+="&"+l+"="+c[l];return a=[e?e:"https://web.archive.org/web/20101030220205/http://csi.gstatic.com/csi",
+"?v=3","&s="+(window.jstiming.sn||"labs_console")+"&action=",a.name,h.length?"&it="+h.join(","):"","",b,"&rt=",k.join(",")].join("")};window.jstiming.report=function(a,c,e){a=n(a,c,e);if(!a)return"";c=new Image;var b=window.jstiming.c++;window.jstiming.a[b]=c;c.onload=c.onerror=function(){delete window.jstiming.a[b]};c.src=a;c=null;return a}};
+
+      window.jstiming.setTimerName(window.jstiming.load, 'ShowApps');
+      function bodyLoaded() {
+          window.jstiming.load.tick('ol');
+          window.jstiming.report(window.jstiming.load);
+      }
+      google.annotations.createAll();
+      google.annotations.fetch();</script></body></html>
+-->
+<!--
+     FILE ARCHIVED ON 22:02:05 Oct 30, 2010 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 21:04:15 Dec 03, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+
+<!--
+playback timings (ms):
+  captures_list: 213.774 (11)
+  exclusion.robots: 0.176
+  exclusion.robots.policy: 0.166
+  cdx.remote: 0.054
+  esindex: 0.008
+  LoadShardBlock: 174.267 (3)
+  PetaboxLoader3.datanode: 207.89 (4)
+  load_resource: 167.233
+  PetaboxLoader3.resolve: 102.003
+-->

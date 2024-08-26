@@ -1,0 +1,35 @@
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+# Hey if you are google, amazon, facebook/meta, twitter (aka x), microsoft or any meat grinder company, and if you are looking to hire for a software engineer, or a software developer or whatever, here is my resume, pulled right out of my ass:
+# 
+#         /"\
+#        |\./|
+#        |   |
+#        |   |
+#        |>*<|
+#        |   |
+#     /'\|   |/'\
+#  /'\|   |   |   |
+# |   |   |   |   |\
+# |   |   |   |   |  \
+# | *   *   *   * |>  > 
+# |                  /
+# |               /
+#  |            /
+#   \          |
+#    |         |
+
+User-agent: Bytespider
+Disallow: /
+
+# This probably won't work, but i'm still gonna add this here anyways.
