@@ -1,6 +1,23 @@
 // oneko.js: https://github.com/adryd325/oneko.js
 
 (function oneko() {
+// Function to get a cookie value
+    function getCookie(name) {
+        const nameEQ = name + "=";
+        const ca = document.cookie.split(';');
+        for (let c of ca) {
+            while (c.charAt(0) === ' ') c = c.substring(1);
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length);
+        }
+        return null;
+    }
+
+    // Check if Oneko should be disabled based on cookie
+
+    if (getCookie('feature2') === "true") {
+        return; // Exit if Oneko should be disabled
+    }
+
   const isReducedMotion =
     window.matchMedia(`(prefers-reduced-motion: reduce)`) === true ||
     window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;

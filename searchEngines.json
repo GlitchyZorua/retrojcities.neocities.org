@@ -104,6 +104,11 @@
       "name": "TheOldNet",
       "url": "http://theoldnet.com/find?query=",
       "disabled": false
+    },
+    {
+      "name": "s.matdoes.dev",
+      "url": "https://s.matdoes.dev/search?q=",
+      "disabled": false
     }
   ]
 }
