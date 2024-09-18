@@ -22,24 +22,26 @@ function applyFeatures() {
     const leakyDisabled = getCookie('feature3') === "true";
     const partykitDisabled = getCookie('feature4') === "true";
     const ponyMode = getCookie('feature5') === "true";
-    const ponyModewithSFX = getCookie('feature7') === "true";
     const hideWebamp = getCookie('feature6') === "false";
-
+    const ponyModewithSFX = getCookie('feature7') === "true";
+    const disableQuote = getCookie('feature8') === "true";
+    //const disableQuote = getCookie('feature9') === "true";
+    
     if (eSheepDisabled) {
         console.log('eSheep is disabled');
-
     } else {
         console.log('eSheep is enabled');
-
     }
-
+    if (disableQuote) {
+        console.log('Quotes is disabled');
+    } else {
+        console.log('Quotes is enabled');
+    }
 
     if (onekoDisabled) {
         console.log('Oneko is disabled');
-
     } else {
         console.log('Oneko is enabled');
-
     }
     
     if (leakyDisabled) {

@@ -61,7 +61,7 @@ var splashes = [
     "Yum Yum Pigs Bum",
     "Go Home Roger!",
     "I Double Dare You.",
-    "Who Loves Orange Soda?",
+    "Who Loves <span style='color:orange;'>Orange</span> Soda?",
     "Score!",
     "Dibs!",
     "Sup b?",
@@ -92,6 +92,29 @@ var splashes = [
     "Jinkys!",
     "Righteous!",
     "Live long and prosper!",
+    "<span style='color:d4ffff;'>Hey all, Scott here!</span>",
+    "Life of the <a href='https://www.youtube.com/watch?v=MR5Ep0EmAMw'><span style='color:yellow;'>Worry Cat</span>, Sorry Cat.</a>",
+    "I (<a href='https://youtu.be/j9QdFU0NxEE'>used to</a>) love Animal Jam!",
+    "<a href='https://www.youtube.com/watch?v=deaBNCkwWGs'>Yep, you're banned.</a>",
+    "Mod Adam.",
+    "Anim\"<b>EA</b>\"l J\"<b>EA</b>\"m",
+    "Existence Invalid",
+    "<a href='https://www.youtube.com/watch?v=5MYX6R2fuwE'>Pineapple doesn't belong on pizza. Fight me.</a>",
+    "<a href='https://www.youtube.com/watch?v=4iQP8C1sAG'>...and what the HELL is that smell?</a>",
+    "As seen on Melonland Forum... and Wiki!",
 ];
 var splashess = splashes[Math.floor(Math.random() * splashes.length)];
-document.write(splashess);
+    function getCookie(name) {
+        const nameEQ = name + "=";
+        const ca = document.cookie.split(';');
+        for (let c of ca) {
+            while (c.charAt(0) === ' ') c = c.substring(1);
+            if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length);
+        }
+        return null;
+    }
+
+    if (getCookie('feature8') === "false") {
+         document.write("<i>"+splashess+"</i>");
+    }
+ 

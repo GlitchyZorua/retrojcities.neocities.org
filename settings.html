@@ -43,7 +43,14 @@
     </label><br>
             <input type="checkbox" data-feature-number="7"> Pony Mode (With SFX) (no i'm not a brony) </input>
     </label><br>
-          <label><input type="checkbox" data-feature-number="6" disabled="true"> Always hide Webamp. Do not show it at all. (Soon)</input>
+          <label><input type="checkbox" data-feature-number="6"> Always hide Webamp. Do not show it at all. (Soon)</input>
+    </label><br>
+    <label><input type="checkbox" data-feature-number="8"> Hide Quotes</input>
+    </label>
+    </label><br>
+    
+    <h2> Music </h2>
+            <label><input type="checkbox" data-feature-number="9" disabled="true"> Hide Radio (under construction)</input>
     </label><br>
     
                                     <h2>Maintence</h2>
@@ -61,6 +68,7 @@
                                       </body></html>
                                         <script>/*/
   function applyFeatures() {
+  // why the fuck do i have this here in the first place
             // Feature 1: eSheep
             const eSheepDisabled = getCookie('feature1');
             if (eSheepDisabled) {
