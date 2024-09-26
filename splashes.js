@@ -113,8 +113,11 @@ var splashess = splashes[Math.floor(Math.random() * splashes.length)];
         }
         return null;
     }
-
+    
+if (document.cookie === "" || document.cookie === null) {
+    document.write("<i>"+splashess+"</i>");
+  } else {
     if (getCookie('feature8') === "false") {
          document.write("<i>"+splashess+"</i>");
     }
- 
+}

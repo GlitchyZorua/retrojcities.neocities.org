@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--- WELCOME TO SHITTY CODE --->
 <link rel="stylesheet" type="text/css" href="css.css">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta charset="utf-8" />
@@ -11,6 +12,7 @@ window.location.replace('https://theoldnet.com/')
 </script>
 <script src="https://adrianotiger.github.io/web-esheep/dist/esheep.min.js"></script>
 <script>
+
 function setCookie(cname, cvalue) {
   document.cookie = cname + "=" + cvalue;
 }
@@ -29,12 +31,15 @@ function getCookie(cname) {
   }
   return "";
 }
-//const eSheepDisableda = getCookie('feature1');
-if (getCookie('feature1') === "false"){
 var sheep = new eSheep(); 
-sheep.Start(); 
-}
-if (getCookie('feature3') === "false"){
+//const eSheepDisableda = getCookie('feature1');
+if (document.cookie === "" || document.cookie === null) {
+    sheep.Start(); 
+  } else {
+    if (getCookie('feature1') === "false") {
+        sheep.Start(); 
+    }
+  }
   // Function to create and append the script tag
   function loadScript() {
     const script = document.createElement('script');
@@ -42,10 +47,20 @@ if (getCookie('feature3') === "false"){
     script.id = 'dynamicScript';
     document.head.appendChild(script);
   }
+ 
+if (document.cookie === "" || document.cookie === null) {
+ loadScript();
+} else {
+if (getCookie('feature3') === "false"){
   loadScript();
   }
-  if (getCookie('feature5') === "true"){
+}
+  if (document.cookie === "" || document.cookie === null) {
+    webamp.renderWhenReady(app);
+  } else {
+  if (getCookie('feature5') === "false"){
 (function (srcs,cfg) { var cbcount = 1; var callback = function () { -- cbcount; if (cbcount === 0) { BrowserPonies.setBaseUrl(cfg.baseurl); if (!BrowserPoniesBaseConfig.loaded) { BrowserPonies.loadConfig(BrowserPoniesBaseConfig); BrowserPoniesBaseConfig.loaded = true; } BrowserPonies.loadConfig(cfg); if (!BrowserPonies.running()) BrowserPonies.start(); } }; if (typeof(BrowserPoniesConfig) === "undefined") { window.BrowserPoniesConfig = {}; } if (typeof(BrowserPoniesBaseConfig) === "undefined") { ++ cbcount; BrowserPoniesConfig.onbasecfg = callback; } if (typeof(BrowserPonies) === "undefined") { ++ cbcount; BrowserPoniesConfig.oninit = callback; } var node = (document.body || document.documentElement || document.getElementsByTagName('head')[0]); for (var id in srcs) { if (document.getElementById(id)) continue; if (node) { var s = document.createElement('script'); s.type = 'text/javascript'; s.id = id; s.src = srcs[id]; node.appendChild(s); } else { document.write('\u003cscript type="text/javscript" src="'+ srcs[id]+'" id="'+id+'"\u003e\u003c/script\u003e'); } } callback();})({"browser-ponies-script":"https://panzi.github.io/Browser-Ponies/browserponies.js","browser-ponies-config":"https://panzi.github.io/Browser-Ponies/basecfg.js"},{"baseurl":"https://panzi.github.io/Browser-Ponies/","fadeDuration":500,"volume":0,"fps":25,"speed":3,"audioEnabled":true,"showFps":false,"showLoadProgress":true,"speakProbability":0.1,"spawn":{"applejack":1,"fluttershy":1,"pinkie pie":1,"rainbow dash":1,"rarity":1,"twilight sparkle":1}});void(0)
+  }
   }
   if (getCookie('feature7') === "true"){
 (function (srcs,cfg) { var cbcount = 1; var callback = function () { -- cbcount; if (cbcount === 0) { BrowserPonies.setBaseUrl(cfg.baseurl); if (!BrowserPoniesBaseConfig.loaded) { BrowserPonies.loadConfig(BrowserPoniesBaseConfig); BrowserPoniesBaseConfig.loaded = true; } BrowserPonies.loadConfig(cfg); if (!BrowserPonies.running()) BrowserPonies.start(); } }; if (typeof(BrowserPoniesConfig) === "undefined") { window.BrowserPoniesConfig = {}; } if (typeof(BrowserPoniesBaseConfig) === "undefined") { ++ cbcount; BrowserPoniesConfig.onbasecfg = callback; } if (typeof(BrowserPonies) === "undefined") { ++ cbcount; BrowserPoniesConfig.oninit = callback; } var node = (document.body || document.documentElement || document.getElementsByTagName('head')[0]); for (var id in srcs) { if (document.getElementById(id)) continue; if (node) { var s = document.createElement('script'); s.type = 'text/javascript'; s.id = id; s.src = srcs[id]; node.appendChild(s); } else { document.write('\u003cscript type="text/javscript" src="'+ srcs[id]+'" id="'+id+'"\u003e\u003c/script\u003e'); } } callback();})({"browser-ponies-script":"https://panzi.github.io/Browser-Ponies/browserponies.js","browser-ponies-config":"https://panzi.github.io/Browser-Ponies/basecfg.js"},{"baseurl":"https://panzi.github.io/Browser-Ponies/","fadeDuration":500,"volume":1,"fps":25,"speed":3,"audioEnabled":true,"showFps":false,"showLoadProgress":true,"speakProbability":0.1,"spawn":{"applejack":1,"fluttershy":1,"pinkie pie":1,"rainbow dash":1,"rarity":1,"twilight sparkle":1}});void(0)
@@ -353,41 +368,45 @@ span.small {
 
  
 <script>
-  let agent = navigator.userAgent;
-  document.getElementById("outputagent").innerHTML = "Your user agent is " + agent;
-  
-  if (window.location.host === "web.archive.org"){
-  document.getElementById("youknowicanseeyoulookingatthiscoderight").innerHTML = "<p style='color: red;'>I KNOW YOU ARE ON ARCHIVE.ORG</p>"
-  } // breaking the forth wall.
-  
-  var container = document.getElementsByClassName('body')[0];
-var copybtn= document.getElementsByClassName('copybtn')[0];
+var highlightElement;
 
-var hex;
-
-function updatehexTime() {
+function updateHighlightTime() {
   var time = new Date();
   var h = time.getHours();
   var m = time.getMinutes();
   var s = time.getSeconds();
 
-  if (h < 10)
-		h = "0" + h;
+  // Format time with leading zeros
+  h = h.toString().padStart(2, "0");
+  m = m.toString().padStart(2, "0");
+  s = s.toString().padStart(2, "0");
 
-	if (m < 10)
-		m = "0" + m;
+  // Combine formatted time for hex color
+  var hex = "#" + h + m + s;
 
-  if (s < 10)
-  	s = "0" + s;
+  // Get the element to be highlighted (assuming an element with ID "time")
+  highlightElement = document.getElementById("time");
 
+  // Create a span element to wrap the highlighted text
+  var highlightSpan = document.createElement("span");
+  highlightSpan.textContent = '#'+ h + m + s;
+  highlightSpan.style.backgroundColor = hex; // Set background for highlighting
 
-  hex = "#"+h+m+s;
-  document.getElementsByClassName('time')[0].innerHTML = hex;
-  //container.style.backgroundColor = hex;
-  document.getElementById("time").style.color = hex;
+  // Clear previous content (if any)
+  highlightElement.innerHTML = "";
+
+  // Append the highlighted time within the element
+  highlightElement.appendChild(highlightSpan);
 }
 
-setInterval(updatehexTime,1000);
+// Assuming you have an element with ID "time"
+highlightElement = document.getElementById("time");
+
+// Set initial highlight on page load
+//updateHighlightTime();
+
+// Update highlight every second
+setInterval(updateHighlightTime, 1000);
 
   function startTime() {
   const today = new Date();
@@ -680,11 +699,15 @@ if (window.location.host === "glitchyzorua.github.io" || window.location.host ==
         }
         return null;
     }
-
-
+ // 
+if (document.cookie === "" || document.cookie === null) {
+    webamp.renderWhenReady(app);
+  } else {
     if (getCookie('feature6') === "false") {
          webamp.renderWhenReady(app);
     }
+  }
+
  
 
  
