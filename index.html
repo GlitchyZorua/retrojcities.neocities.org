@@ -43,7 +43,8 @@ if (document.cookie === "" || document.cookie === null) {
   // Function to create and append the script tag
   function loadScript() {
     const script = document.createElement('script');
-    script.src = 'https://melonking.net/scripts/flood.js';
+   // script.src = 'https://melonking.net/scripts/flood.js';
+    script.src = "flood.js";
     script.id = 'dynamicScript';
     document.head.appendChild(script);
   }
@@ -71,6 +72,7 @@ if (getCookie('feature3') === "false"){
 </body>
 <script src="oneko.js"></script>
 <script src="nochrm.js"></script>
+<script src="beat.js"></script>
 <link href="https://melonking.net/styles/flood.css" rel="stylesheet" type="text/css" media="all" />
 <!--<script src="https://melonking.net/scripts/flood.js"></script>-->
 <script defer src="https://melonking.net/scripts/swatchTime.js"></script>
@@ -551,7 +553,9 @@ url.addEventListener('keydown', (event) => {
         </div>
 </body>     
 
-    </p><span id="swatchClock">@000</span> - <span id="date"></span> - <span id="time"><span class="time">#FFFFFF</span></span> - <a href="https://www.imood.com/users/GlitchyZorua"><a href="https://www.imood.com/users/GlitchyZorua"><img src="https://moods.imood.com/display/uname-GlitchyZorua/fg-FFFFFF/bg-000000/imood.gif" alt="The current mood of GlitchyZorua at www.imood.com" border="0"></a></span>
+    </p>
+    
+<script src="zodiac.js"></script><span id="swatchClock">@000</span> - <span id="date"></span> <span id="zodiac-container"></span> - <span id="time"><span class="time">#FFFFFF</span></span> - <a href="https://www.imood.com/users/GlitchyZorua"><a href="https://www.imood.com/users/GlitchyZorua"><img src="https://moods.imood.com/display/uname-GlitchyZorua/fg-FFFFFF/bg-000000/imood.gif" alt="The current mood of GlitchyZorua at www.imood.com" border="0"></a></span>
    
 <script defer src="https://melonking.net/scripts/swatchTime.js"></script> 
 
@@ -579,8 +583,53 @@ url.addEventListener('keydown', (event) => {
         https://photomosh.com/
         -->
         
+        <br><br>
         <script>
-    // This is what happens. If we fucking have two mirrors, similer shit. Messy code like this.
+        function BeatsUntilMidnight() {
+    // Get the current Swatch time in beats (no decimals needed)
+    var currentBeats = parseFloat(GetSwatchTime(false));
+    // Total beats in a day is 1000 (from @000 to @999)
+    var totalBeatsInDay = 1000;
+    // Calculate remaining beats until @000
+    var remainingBeats = totalBeatsInDay - currentBeats;
+    // Handle edge case where remainingBeats is 0 (exactly at @000)
+    return remainingBeats === 0 ? totalBeatsInDay : remainingBeats;
+}
+			var close_countdown = document.getElementById("close_countdown");
+
+        if(isSwatchMonday()) { // this code fucking sucks why am i using document.write()
+				document.write('<span id="close_alert"><strong>Boop!</strong> The Melonland Forum <a href="https://wiki.melonland.net/forum_help#why_is_the_forum_closed_on_mondays" target="_blank">will re-open</a> in <strong id="close_countdown">858</strong>.beats!</span>') 
+				} else if (isSwatchSunday()){ // this code fucking sucks why am i using document.write()
+				document.write('<span id="close_alert"><strong>Boop!</strong> The Melonland Forum <a href="https://wiki.melonland.net/forum_help#why_is_the_forum_closed_on_mondays" target="_blank">will close</a> in <strong id="close_countdown">858</strong>.beats!</span>')
+				} else if (close_countdown === null || close_countdown === undefined) {
+				  console.error('Close countdown is either null or undefined');
+				}
+
+		//	var close_countdown_prog = document.getElementById("close_countdown_prog");
+			setInterval(function () {
+				close_countdown.innerHTML = BeatsUntilMidnight();
+		//		close_countdown_prog.value = GetSwatchTime(false);
+       if (close_countdown === undefined || close_countdown === null){
+         console.error('Close countdown is either null or undefined');
+         break;
+         }
+       
+			}, 864);
+
+			function isSwatchMonday() {
+				const now = new Date();
+				const utcPlus1 = new Date(now.getTime() + 3600000); // Add 1 hour (3600000 ms)
+				// Check if it's Monday (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
+				return utcPlus1.getUTCDay() === 1;
+			}
+			function isSwatchSunday() {
+				const now = new Date();
+				const utcPlus1 = new Date(now.getTime() + 3600000); // Add 1 hour (3600000 ms)
+				// Check if it's Monday (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
+				return utcPlus1.getUTCDay() === 0;
+			}
+		
+    // This is what happens. If we fucking have two mirrors, similar shit. Messy code like this.
     // oh well. i guess thats what i get for using GitHub Pages.
 if (window.location.host === "glitchyzorua.github.io" || window.location.host === "GlitchyZorua.github.io") { 
       document.write("<br><br><font size=\"-1\"><a href=\"https:\/\/retrojcities.neocities.org\">Neocities Site<\/a> - <a href=\"https:\/\/github.com\/GlitchyZorua\">GitHub Profile<\/a> - <a href=\"about.html\">About Me<\/a> - <a href=\"https:\/\/users3.smartgb.com\/g\/g.php?a=s&i=g36-34400-4f\">Sign My Guestbook<\/a> - <a href=\"\/pages\/news\">Site News<\/a> - <a href=\"\/pages\/articles\/articles\">Blogs<\/a> - <a href=\"\/pages\/microblogs.html\">Micro-Blog<\/a> - <a href=\"https:\/\/discord.gg\/Ms4NFJb\">Discord<\/a> - <a href=\"https:\/\/matrix.to\/#\/#RetroJSpace:matrix.org\">Matrix<\/a> - <a href=\"https:\/\/wetdry.world\/@GlitchyZorua\/\">Mastodon<\/a> - <a href=\"https:\/\/forum.melonland.net\/index.php?action=profile;u=1880\">Melonland Forum<\/a><\/font><p>\ud83c\udd2f 2023-2024 RetroJCity<\/p><br><br><br>");
