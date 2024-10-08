@@ -554,9 +554,19 @@ url.addEventListener('keydown', (event) => {
 </body>     
 
     </p>
-    
-<script src="zodiac.js"></script><span id="swatchClock">@000</span> - <span id="date"></span> <span id="zodiac-container"></span> - <span id="time"><span class="time">#FFFFFF</span></span> - <a href="https://www.imood.com/users/GlitchyZorua"><a href="https://www.imood.com/users/GlitchyZorua"><img src="https://moods.imood.com/display/uname-GlitchyZorua/fg-FFFFFF/bg-000000/imood.gif" alt="The current mood of GlitchyZorua at www.imood.com" border="0"></a></span>
-   
+
+<script src="https://cdn.jsdelivr.net/npm/time-moji@latest/time-moji.js">
+// Clock Emoji
+const emoji = document.querySelector('.emoji');
+emoji.textContent = Tmj.getTimeMoji(new Date(), 'clock');
+// Landscape Emoji
+const landscape = document.querySelector('.landscape');
+landscape.textContent = Tmj.getTimeMoji(new Date(), 'landscape');
+</script>
+<script src="zodiac.js"></script><script src="chinazodiac.js"></script><span id="swatchClock">@000</span> - <span id="date"></span> <span id="zodiac-container"></span><span id="zodiacEmoji"></span> - <span class="emoji"></span> <span class="landscape"></span> - <span id="time"><span class="time">#FFFFFF</span></span> - <a href="https://www.imood.com/users/GlitchyZorua"><a href="https://www.imood.com/users/GlitchyZorua"><img src="https://moods.imood.com/display/uname-GlitchyZorua/fg-FFFFFF/bg-000000/imood.gif" alt="The current mood of GlitchyZorua at www.imood.com" border="0"></a></span>
+<script>
+
+</script>
 <script defer src="https://melonking.net/scripts/swatchTime.js"></script> 
 
 

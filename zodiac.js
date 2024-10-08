@@ -37,6 +37,12 @@
 
             container.appendChild(emojiElement);
             startTime() // fucking hacks
+            // Clock Emoji
+const emoji = document.querySelector('.emoji');
+emoji.textContent = Tmj.getTimeMoji(new Date(), 'clock');
+// Landscape Emoji
+const landscape = document.querySelector('.landscape');
+landscape.textContent = Tmj.getTimeMoji(new Date(), 'landscape');
         } else {
             container.innerHTML = "No zodiac sign found for today.";
         }
