@@ -38,7 +38,7 @@ var splashes = [
   ":)",
   "As seen on <span style='color:yellow'>Ironfacebuster</span>",
   "As seen on <b>TV!</b>",
-  "As seen on NeoNet!",
+  // "As seen on NeoNet!",
   "Donate to Internet Archive!",
   "12345 is a bad password!",
   "Motivation posters SUCK.",
@@ -102,7 +102,33 @@ var splashes = [
     "<a href='https://www.youtube.com/watch?v=5MYX6R2fuwE'>Pineapple doesn't belong on pizza. Fight me.</a>",
     "<a href='https://www.youtube.com/watch?v=4iQP8C1sAG'>...and what the HELL is that smell?</a>",
     "As seen on Melonland Forum... and Wiki!",
+    "BlueSky users learn <b>NOTHING</b>.",
+    "<a href=\"https://wetdry.world/@GlitchyZorua/113382266704150361\">BlueShit</a>",
+    "Twitter users learned <b>NOTHING</b>.",
+    "BAN ALL THE USERS SAYING OFC", 
+    "Knows where you live!",
+    "why are you using windows",
+    "It's very easy!",
+    "home of the microsoft toaster icon",
+    "h",
+    "🅱🅰🅿ℹ🅾",
+    "<a href=\"https://www.youtube.com/watch?v=njm-tmxrWFg\">how do we know what's mainline?</a>",
+    "go to hell before you die",
+    "Hates Chrome!",
+    "Hates BlueSky!",
+    "Hates Twitter!",
+    "Hates EVERYTHING MADE BY FACEBOOK",
+    "The only good Google product so far is android, apparently!",
+    "you shouldn't consider ip addresses as personal information.",
+    "NFTs, more like no fucking thanks.",
+    "Also check out <a href=\"http://moule.world/\">moule.world</a>!",
+    `¯\\_(ツ)_/¯`,
+    "Will complain every wrong little thing with your Discord server.",
+    "It's called a <span style=\"color:#FF0000\">R</span><span style=\"color:#FF8B00\">a</span><span style=\"color:#E8FF00\">i</span><span style=\"color:#5DFF00\">n</span><span style=\"color:#00FF2E\">b</span><span style=\"color:#00FFB9\">o</span><span style=\"color:#00B9FF\">w</span> <span style=\"color:#002EFF\">R</span><span style=\"color:#5D00FF\">o</span><span style=\"color:#E800FF\">a</span><span style=\"color:#FF008B\">d</span>",
 ];
+let date = new Date();
+let hours = date.getHours();
+let newformat = hours >= 12 ? 'PM' : 'AM';
 var splashess = splashes[Math.floor(Math.random() * splashes.length)];
     function getCookie(name) {
         const nameEQ = name + "=";
@@ -115,6 +141,12 @@ var splashess = splashes[Math.floor(Math.random() * splashes.length)];
     }
     
 if (document.cookie === "" || document.cookie === null) {
+  if (Math.floor(Math.random() * 3 + 1) === 2){
+  if (newformat === "AM"){
+    document.write('Good Morning!');
+    return;
+  }
+  }
     document.write("<i>"+splashess+"</i>");
   } else {
     if (getCookie('feature8') === "false") {

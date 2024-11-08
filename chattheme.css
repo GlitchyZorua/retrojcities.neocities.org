@@ -1,0 +1,173 @@
+@keyframes glow {
+   from {
+     box-shadow: 0 0 5px #0F0;
+  }
+   to {
+     box-shadow: none;
+  }
+}
+ :root {
+   --notification-sfx: https://files.catbox.moe/upvxad.mp3;
+}
+body {
+  background-color: #000;
+  color: #00AA00;
+  font-family: monospace;
+}
+ .allMessages {
+   color: #00AA00;
+   text-shadow: 1px 1px 3px #0A0;
+   border-radius: 10px;
+   font-family: monospace;
+   letter-spacing: -1px;
+}
+ .sent {
+}
+ .recieved {
+}
+.senderInfo {
+  color: #0F0;
+  text-shadow: 0 0 3px #0F0;
+}
+ #background {
+   background-color: #000;
+   scrollbar-color: #0A0 #000;
+   scrollbar-width: thin;
+}
+ #input {
+   color: #0F0;
+   background: #000;
+   border: none;
+   outline: none;
+   font-family: monospace;
+}
+ #input:empty:before {
+   color: #050;
+}
+ #timestamp {
+   color: #0F0;
+   font-style: italic;
+   font-family: monospace;
+   font-size: 9pt;
+   text-align: left !important;
+   width: calc(100% - 20px);
+   padding: 0 10px 0 10px;
+   text-shadow: 1px 1px 3px #0F0;
+}
+ #top_banner {
+   font-family: monospace;
+   color: #0F0;
+   background-color: #222;
+}
+ blockquote {
+   background-color: #222;
+   border-color: #0F0;
+}
+ #loadMore {
+   color: #0F0;
+   font-family: monospace;
+   font-size: 10pt;
+}
+ #loadMore:hover {
+   text-decoration: underline;
+   text-decoration-style: dotted;
+   text-decoration-color: #F00;
+}
+ .pinned {
+   animation: 500ms linear infinite alternate glow;
+}
+.pinned:after {
+  display: none;
+}
+.mod, .owner, .tester {
+  width: 0;
+  font-size: 8pt;
+  text-shadow: none;
+}
+.mod::before {
+  content: "[MOD]";
+  display: inline-block;
+  color: #F00;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  text-shadow: 0 0 3px #F00;
+}
+.owner::before {
+  content: "[OWNER]";
+  display: inline-block;
+  color: #F00;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  text-shadow: 0 0 3px #F00;
+}
+.beta::before {
+  content: "[BETA TESTER]";
+  display: inline-block;
+  color: #0F0;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+}
+#settings {
+  background-image: none;
+}
+#settings:after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  content: "#";
+  color: #0F0;
+}
+#settings:hover:after {
+  font-weight: bold;
+}
+#replyBanner {
+  color: #0F0;
+  font-family: monospace;
+  font-size: 8pt;
+  text-shadow: 0 0 3px #0F0;
+}
+.msgBody a {
+  color: #0F0 !important;
+}
+#emojiTrayToggle {
+  -webkit-filter: drop-shadow(1px 1px 1px #0F0), drop-shadow(-1px -1px 1px #0F0);
+  filter: drop-shadow(1px 1px 1px #0F0), drop-shadow(-1px -1px 1px #0F0);
+  box-shadow: 1px 1px 1px #0F0, -1px -1px 1px #0F0;
+}
+#emojiTray {
+  background-color: #000;
+  color: #0F0;
+  border-color: #0F0;
+}
+#settingsMenu {
+  color: #0F0;
+}
+#settingsMenu input[type=text] {
+  border: none;
+  border-bottom: solid 1px #0F0;
+  background-color: transparent;
+  color: #0F0;
+  outline: none !important;
+}
+#save {
+  border: none;
+  background-color: transparent;
+  color: #0F0;
+  font-size: 12pt;
+  font-weight: bolder;
+  cursor: pointer;
+}
+#save:hover {
+  text-shadow: 0 0 5px #0F0;
+}
+#save::before {
+  content: "[";
+  margin-right: 10px;
+}
+#save::after {
+  content: "]";
+  margin-left: 10px;
+}

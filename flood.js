@@ -113,7 +113,7 @@ function doBilge() {
         // Its too soon to bilge again!
         flood.audio.clunk.currentTime = 0;
         flood.audio.clunk.play();
-        flood.html.message.innerHTML = flood.msg.toosoon+floodlevelMessage;
+        flood.html.message.innerHTML = flood.msg.toosoon;
         return;
     }
     flood.lastBilge = Date.now();

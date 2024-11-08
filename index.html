@@ -11,6 +11,7 @@ window.location.replace('https://theoldnet.com/')
 }
 </script>
 <script src="https://adrianotiger.github.io/web-esheep/dist/esheep.min.js"></script>
+<script src="xp_popup.js"></script>
 <script>
 
 function setCookie(cname, cvalue) {
@@ -59,7 +60,7 @@ if (getCookie('feature3') === "false"){
   if (document.cookie === "" || document.cookie === null) {
     webamp.renderWhenReady(app);
   } else {
-  if (getCookie('feature5') === "false"){
+  if (getCookie('feature5') === "true"){
 (function (srcs,cfg) { var cbcount = 1; var callback = function () { -- cbcount; if (cbcount === 0) { BrowserPonies.setBaseUrl(cfg.baseurl); if (!BrowserPoniesBaseConfig.loaded) { BrowserPonies.loadConfig(BrowserPoniesBaseConfig); BrowserPoniesBaseConfig.loaded = true; } BrowserPonies.loadConfig(cfg); if (!BrowserPonies.running()) BrowserPonies.start(); } }; if (typeof(BrowserPoniesConfig) === "undefined") { window.BrowserPoniesConfig = {}; } if (typeof(BrowserPoniesBaseConfig) === "undefined") { ++ cbcount; BrowserPoniesConfig.onbasecfg = callback; } if (typeof(BrowserPonies) === "undefined") { ++ cbcount; BrowserPoniesConfig.oninit = callback; } var node = (document.body || document.documentElement || document.getElementsByTagName('head')[0]); for (var id in srcs) { if (document.getElementById(id)) continue; if (node) { var s = document.createElement('script'); s.type = 'text/javascript'; s.id = id; s.src = srcs[id]; node.appendChild(s); } else { document.write('\u003cscript type="text/javscript" src="'+ srcs[id]+'" id="'+id+'"\u003e\u003c/script\u003e'); } } callback();})({"browser-ponies-script":"https://panzi.github.io/Browser-Ponies/browserponies.js","browser-ponies-config":"https://panzi.github.io/Browser-Ponies/basecfg.js"},{"baseurl":"https://panzi.github.io/Browser-Ponies/","fadeDuration":500,"volume":0,"fps":25,"speed":3,"audioEnabled":true,"showFps":false,"showLoadProgress":true,"speakProbability":0.1,"spawn":{"applejack":1,"fluttershy":1,"pinkie pie":1,"rainbow dash":1,"rarity":1,"twilight sparkle":1}});void(0)
   }
   }
@@ -349,7 +350,7 @@ document.onclick=function(event){var elems=document.getElementsByName('more');if
         <style>
         @font-face {
            font-family: "clockfont";
-           src: url("digital-7.ttf");
+           src: url("alarm_clock.ttf");
         }
 
 
@@ -523,6 +524,17 @@ document.addEventListener("DOMContentLoaded", function() {
     luck.addEventListener("click", searchluck);
     
 url.addEventListener('keydown', (event) => {
+
+      if (event.shiftKey && event.key === "Enter"){
+            searchneocities();
+       return;
+      }
+      if (!event.shiftKey && event.key === 'Enter') {
+        searchwww();
+        return;
+      }
+    });
+  });
   /*/
   if (event.shiftKey) {
     keys.Shift = true;
@@ -531,21 +543,6 @@ url.addEventListener('keydown', (event) => {
     keys.Enter = true;
   }
 /*/
-      if (event.shiftKey && event.key === "Enter"){
-          url.addEventListener('focus', function() {
-            searchneocities();
-  });
-       return;
-      }
-      if (!event.shiftKey && event.key === 'Enter') {
-        url.addEventListener('focus', function() {
-        searchwww();
-        });
-        return;
-      }
-    });
-  });
-
     </script>
 <body onload="startTime()">
         <div id="clockfont">
@@ -594,51 +591,60 @@ landscape.textContent = Tmj.getTimeMoji(new Date(), 'landscape');
         -->
         
         <br><br>
-        <script>
-        function BeatsUntilMidnight() {
-    // Get the current Swatch time in beats (no decimals needed)
+        <script defer src="https://melonking.net/scripts/swatchTime.js"></script>
+
+<script>
+function BeatsUntilMidnight() {
     var currentBeats = parseFloat(GetSwatchTime(false));
-    // Total beats in a day is 1000 (from @000 to @999)
     var totalBeatsInDay = 1000;
-    // Calculate remaining beats until @000
     var remainingBeats = totalBeatsInDay - currentBeats;
-    // Handle edge case where remainingBeats is 0 (exactly at @000)
     return remainingBeats === 0 ? totalBeatsInDay : remainingBeats;
 }
-			var close_countdown = document.getElementById("close_countdown");
 
-        if(isSwatchMonday()) { // this code fucking sucks why am i using document.write()
-				document.write('<span id="close_alert"><strong>Boop!</strong> The Melonland Forum <a href="https://wiki.melonland.net/forum_help#why_is_the_forum_closed_on_mondays" target="_blank">will re-open</a> in <strong id="close_countdown">858</strong>.beats!</span>') 
-				} else if (isSwatchSunday()){ // this code fucking sucks why am i using document.write()
-				document.write('<span id="close_alert"><strong>Boop!</strong> The Melonland Forum <a href="https://wiki.melonland.net/forum_help#why_is_the_forum_closed_on_mondays" target="_blank">will close</a> in <strong id="close_countdown">858</strong>.beats!</span>')
-				} else if (close_countdown === null || close_countdown === undefined) {
-				  console.error('Close countdown is either null or undefined');
-				}
+function updateCountdown() {
+    var closeCountdownElement = document.getElementById("close_countdown");
+    if (closeCountdownElement) {
+        closeCountdownElement.innerHTML = BeatsUntilMidnight();
+    }
+}
 
-		//	var close_countdown_prog = document.getElementById("close_countdown_prog");
-			setInterval(function () {
-				close_countdown.innerHTML = BeatsUntilMidnight();
-		//		close_countdown_prog.value = GetSwatchTime(false);
-       if (close_countdown === undefined || close_countdown === null){
-         console.error('Close countdown is either null or undefined');
-         break;
-         }
-       
-			}, 864);
+function showForumStatus() {
+    var forumStatusElement = document.getElementById("forum_status");
+    var beatsLeft = BeatsUntilMidnight();
 
-			function isSwatchMonday() {
-				const now = new Date();
-				const utcPlus1 = new Date(now.getTime() + 3600000); // Add 1 hour (3600000 ms)
-				// Check if it's Monday (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
-				return utcPlus1.getUTCDay() === 1;
-			}
-			function isSwatchSunday() {
-				const now = new Date();
-				const utcPlus1 = new Date(now.getTime() + 3600000); // Add 1 hour (3600000 ms)
-				// Check if it's Monday (0 = Sunday, 1 = Monday, ..., 6 = Saturday)
-				return utcPlus1.getUTCDay() === 0;
-			}
-		
+    if (isSwatchMonday()) {
+        forumStatusElement.innerHTML = `<strong>Boop!</strong> The Melonland Forum <a href="https://wiki.melonland.net/forum_help#why_is_the_forum_closed_on_mondays" target="_blank">will re-open</a> in <strong id="close_countdown">${beatsLeft}</strong>.beats!`;
+    } else if (isSwatchSunday()) {
+        forumStatusElement.innerHTML = `<strong>Boop!</strong> The Melonland Forum <a href="https://wiki.melonland.net/forum_help#why_is_the_forum_closed_on_mondays" target="_blank">will close</a> in <strong id="close_countdown">${beatsLeft}</strong>.beats!`;
+    } else {
+        forumStatusElement.innerHTML = ""; // Clear the status if it's neither Sunday nor Monday
+    }
+}
+
+function isSwatchMonday() {
+    const now = new Date();
+    const utcPlus1 = new Date(now.getTime() + 3600000); // Add 1 hour (3600000 ms)
+    return utcPlus1.getUTCDay() === 1; // Monday
+}
+
+function isSwatchSunday() {
+    const now = new Date();
+    const utcPlus1 = new Date(now.getTime() + 3600000); // Add 1 hour (3600000 ms)
+    return utcPlus1.getUTCDay() === 0; // Sunday
+}
+
+// Execute on load
+document.addEventListener("DOMContentLoaded", function() {
+    showForumStatus();
+    setInterval(updateCountdown, 1000); // Update every second
+});
+</script>
+
+<div id="forum_status"></div>
+
+        
+        <script>
+
     // This is what happens. If we fucking have two mirrors, similar shit. Messy code like this.
     // oh well. i guess thats what i get for using GitHub Pages.
 if (window.location.host === "glitchyzorua.github.io" || window.location.host === "GlitchyZorua.github.io") { 

@@ -54,6 +54,9 @@ if (isDisallowed && !isAllowed) {
 // I'm leaving this (the above code for backwards compatiblity with older chromium based shit browsers that don't support navigator.userAgentData.brands
 function isChromiumGoFuckYourselfMicrosoftEdge() {
     for (brand_version_pair of window.navigator.userAgentData.brands) {
+        if (brand_version_pair.brand == undefined || brand_version_pair.brand == null){
+        return;  
+        }
         if (brand_version_pair.brand == "Chromium"){
            // get out of my website
             showNavWarn();
