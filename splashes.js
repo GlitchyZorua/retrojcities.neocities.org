@@ -102,7 +102,7 @@ var splashes = [
     "<a href='https://www.youtube.com/watch?v=5MYX6R2fuwE'>Pineapple doesn't belong on pizza. Fight me.</a>",
     "<a href='https://www.youtube.com/watch?v=4iQP8C1sAG'>...and what the HELL is that smell?</a>",
     "As seen on Melonland Forum... and Wiki!",
-    "BlueSky users learn <b>NOTHING</b>.",
+    //"BlueSky users learn <b>NOTHING</b>.",
     "<a href=\"https://wetdry.world/@GlitchyZorua/113382266704150361\">BlueShit</a>",
     "Twitter users learned <b>NOTHING</b>.",
     "BAN ALL THE USERS SAYING OFC", 
@@ -125,6 +125,8 @@ var splashes = [
     `¯\\_(ツ)_/¯`,
     "Will complain every wrong little thing with your Discord server.",
     "It's called a <span style=\"color:#FF0000\">R</span><span style=\"color:#FF8B00\">a</span><span style=\"color:#E8FF00\">i</span><span style=\"color:#5DFF00\">n</span><span style=\"color:#00FF2E\">b</span><span style=\"color:#00FFB9\">o</span><span style=\"color:#00B9FF\">w</span> <span style=\"color:#002EFF\">R</span><span style=\"color:#5D00FF\">o</span><span style=\"color:#E800FF\">a</span><span style=\"color:#FF008B\">d</span>",
+    "don't worry about it.",
+   // "This quote requires a <span style=\"color:blue\">BlueSky</span><span style=\"color:yellow\">Gold</span> account ",
 ];
 let date = new Date();
 let hours = date.getHours();
@@ -141,12 +143,6 @@ var splashess = splashes[Math.floor(Math.random() * splashes.length)];
     }
     
 if (document.cookie === "" || document.cookie === null) {
-  if (Math.floor(Math.random() * 3 + 1) === 2){
-  if (newformat === "AM"){
-    document.write('Good Morning!');
-    return;
-  }
-  }
     document.write("<i>"+splashess+"</i>");
   } else {
     if (getCookie('feature8') === "false") {
