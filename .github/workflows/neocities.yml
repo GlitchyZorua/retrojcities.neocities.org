@@ -6,7 +6,7 @@ on:
       - main
 concurrency: # prevent concurrent deploys doing strange things
   group: deploy-to-neocities
-  cancel-in-progress: true
+  cancel-in-progress: false
 jobs:
   deploy:
     runs-on: ubuntu-latest
