@@ -139,20 +139,6 @@ body, td, a, p, .h {
   color:#fff;
 }
 
-
-.center
-{
-  display: block;
-  text-align: center;
-  margin: 5px auto;
-}
-
-.center_table
-{
-  text-align: center;
-  margin: 5px auto;
-}
-
 @font-face {
     font-family: "clockfont";
     src: url("alarm_clock.ttf");
