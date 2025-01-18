@@ -35,7 +35,7 @@ if (document.cookie === "" || document.cookie === null) {
   // Function to create and append the script tag
   function loadScript() {
     const script = document.createElement('script');
-    // script.src = 'https://melonking.net/scripts/flood.js';
+    // script.src = 'https://melonking.net/scripts/flood.js'; 
     script.src = "flood.js";
     script.id = 'dynamicScript';
     document.head.appendChild(script);

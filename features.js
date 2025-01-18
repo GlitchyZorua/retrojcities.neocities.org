@@ -27,51 +27,51 @@ function applyFeatures() {
     const disableQuote = getCookie('feature8') === "true";
     //const disableQuote = getCookie('feature9') === "true";
     
-    if (eSheepDisabled) {
+    if (eSheepDisabled === "true") { 
         console.log('eSheep is disabled');
     } else {
         console.log('eSheep is enabled');
     }
-    if (disableQuote) {
+    if (disableQuote === "true") {
         console.log('Quotes is disabled');
     } else {
         console.log('Quotes is enabled');
     }
 
-    if (onekoDisabled) {
+    if (onekoDisabled === "true") {
         console.log('Oneko is disabled');
     } else {
         console.log('Oneko is enabled');
     }
     
-    if (leakyDisabled) {
+    if (leakyDisabled === "true") {
         console.log('leaky is disabled');
     } else {
         console.log('leaky is enabled');
     }
         
 
-    if (partykitDisabled) {
+    if (partykitDisabled === "true") {
         console.log('partykit is disabled');
 
     } else {
         console.log('partykit is enabled');
 
     }
-    if (ponyMode) {
+    if (ponyMode === "true") {
         console.log('pony mode is enabled');
 
     } else {
         console.log('pony mode is disabled');
 
     }
-    if (ponyModewithSFX) {
+    if (ponyModewithSFX === "true") {
         console.log('pony mode w/ sfx is enabled');
 
     } else {
         console.log('pony mode w/ sfx is disabled');
     }
-    if (hideWebamp) {
+    if (hideWebamp === "true") {
         console.log('hide webamp is enabled');
     } else {
         console.log('hide webamp is disabled');

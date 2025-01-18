@@ -103,7 +103,7 @@ var splashes = [
     "<a href='https://www.youtube.com/watch?v=4iQP8C1sAG'>...and what the HELL is that smell?</a>",
     "As seen on Melonland Forum... and Wiki!",
     //"BlueSky users learn <b>NOTHING</b>.",
-    "<a href=\"https://wetdry.world/@GlitchyZorua/113382266704150361\">BlueShit</a>",
+    //"<a href=\"https://wetdry.world/@GlitchyZorua/113382266704150361\">BlueShit</a>",
     "Twitter users learned <b>NOTHING</b>.",
     "BAN ALL THE USERS SAYING OFC", 
     "Knows where you live!",
@@ -115,7 +115,7 @@ var splashes = [
     "<a href=\"https://www.youtube.com/watch?v=njm-tmxrWFg\">how do we know what's mainline?</a>",
     "go to hell before you die",
     "Hates Chrome!",
-    "Hates BlueSky!",
+    // "Hates BlueSky!",
     "Hates Twitter!",
     "Hates EVERYTHING MADE BY FACEBOOK",
     "The only good Google product so far is android, apparently!",
@@ -141,12 +141,12 @@ var splashess = splashes[Math.floor(Math.random() * splashes.length)];
         }
         return null;
     }
-    
+  var fuckoff = "<i>"+splashes+"</i>";
 if (document.cookie === "" || document.cookie === null) {
     //document.write("<i>"+splashess+"</i>");
-    document.getElementById('quotes').value = "<i>"+splashes+"</i>";
+    document.getElementById('quotes').value = fuckoff;
   } else {
-    if (getCookie('feature7') === "false") {
-      document.getElementById('quotes').value = "<i>"+splashes+"</i>";
+    if (getCookie('feature8') === "false") {
+      document.getElementById('quotes').value = fuckoff;
     }
 }
