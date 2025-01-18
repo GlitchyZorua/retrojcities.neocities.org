@@ -143,9 +143,10 @@ var splashess = splashes[Math.floor(Math.random() * splashes.length)];
     }
     
 if (document.cookie === "" || document.cookie === null) {
-    document.write("<i>"+splashess+"</i>");
+    //document.write("<i>"+splashess+"</i>");
+    document.getElementById('quotes').value = "<i>"+splashes+"</i>";
   } else {
-    if (getCookie('feature8') === "false") {
-         document.write("<i>"+splashess+"</i>");
+    if (getCookie('feature7') === "false") {
+      document.getElementById('quotes').value = "<i>"+splashes+"</i>";
     }
 }
