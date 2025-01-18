@@ -138,15 +138,13 @@ var splashess = splashes[Math.floor(Math.random() * splashes.length)];
         for (let c of ca) {
             while (c.charAt(0) === ' ') c = c.substring(1);
             if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length);
-        }
         return null;
     }
   var fuckoff = "<i>"+splashes+"</i>";
 if (document.cookie === "" || document.cookie === null) {
     //document.write("<i>"+splashess+"</i>");
     document.getElementById('quotes').value = fuckoff;
-  } else {
-    if (getCookie('feature8') === "false") {
+  } else if (getCookie('feature8') === "false") {
       document.getElementById('quotes').value = fuckoff;
-    }
+  }
 }
