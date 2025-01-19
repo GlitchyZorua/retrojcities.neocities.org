@@ -23,7 +23,7 @@ function getCookie(cname) {
   }
   return "";
 }
-sheep.Start(); 
+
   // Function to create and append the script tag
   function loadScript() {
     const script = document.createElement('script');
@@ -32,7 +32,13 @@ sheep.Start();
     script.id = 'dynamicScript';
     document.head.appendChild(script);
   }
- 
+ function loadSheep(){
+  const script = document.createElement('script');
+  // script.src = 'https://melonking.net/scripts/flood.js'; 
+  script.src = "sheep.js";
+  script.id = 'dynamicScript';
+  document.head.appendChild(script);
+ }
 if (document.cookie === "" || document.cookie === null) {
  loadScript();
 } else {
