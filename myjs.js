@@ -4,7 +4,7 @@ if (navigator.userAgent.includes("WebTV")) {
 }
 
 
-document.getElementById('UserAgent').value = navigator.userAgent;
+//document.getElementById('UserAgent').value = navigator.userAgent;
 function setCookie(cname, cvalue) {
   document.cookie = cname + "=" + cvalue;
 }
