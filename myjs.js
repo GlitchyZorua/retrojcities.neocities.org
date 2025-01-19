@@ -23,15 +23,7 @@ function getCookie(cname) {
   }
   return "";
 }
-var sheep = new eSheep(); 
-//const eSheepDisableda = getCookie('feature1');
-if (document.cookie === "" || document.cookie === null) {
-    sheep.Start(); 
-  } else {
-    if (getCookie('feature1') === "false") {
-        sheep.Start(); 
-    }
-  }
+sheep.Start(); 
   // Function to create and append the script tag
   function loadScript() {
     const script = document.createElement('script');
