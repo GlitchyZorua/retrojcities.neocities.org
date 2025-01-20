@@ -140,7 +140,7 @@ var splashess = splashes[Math.floor(Math.random() * splashes.length)];
             if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length);
         return null;
     }
-  var fuckoff = "<i>"+splashes+"</i>";
+  var fuckoff = "<i>"+splashess+"</i>";
 if (document.cookie === "" || document.cookie === null) {
     //document.write("<i>"+splashess+"</i>");
     document.getElementById('quotes').value = fuckoff;
