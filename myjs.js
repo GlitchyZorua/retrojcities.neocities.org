@@ -1,4 +1,3 @@
-
 if (navigator.userAgent.includes("WebTV")) {
   alert('Heya! Sorry, but WebTV boxes are not supported, Unfortunately. For the safety of your poor webtv box trying to run all of the javascript in this page, Page loading halted. Press OK to redirect you to something else!');
   window.location.replace('https://theoldnet.com/')
@@ -49,138 +48,6 @@ if (document.cookie === "" || document.cookie === null) {
   }
 }
 
-if (document.cookie === "" || document.cookie === null) {
-//  webamp.renderWhenReady(app);
-} else {
-  if (getCookie('feature5') === "true") {
-    (function (srcs, cfg) {
-      var cbcount = 1;
-      var callback = function () {
-        --cbcount;
-        if (cbcount === 0) {
-          BrowserPonies.setBaseUrl(cfg.baseurl);
-          if (!BrowserPoniesBaseConfig.loaded) {
-            BrowserPonies.loadConfig(BrowserPoniesBaseConfig);
-            BrowserPoniesBaseConfig.loaded = true;
-          }
-          BrowserPonies.loadConfig(cfg);
-          if (!BrowserPonies.running()) BrowserPonies.start();
-        }
-      };
-      if (typeof (BrowserPoniesConfig) === "undefined") {
-        window.BrowserPoniesConfig = {};
-      }
-      if (typeof (BrowserPoniesBaseConfig) === "undefined") {
-        ++cbcount;
-        BrowserPoniesConfig.onbasecfg = callback;
-      }
-      if (typeof (BrowserPonies) === "undefined") {
-        ++cbcount;
-        BrowserPoniesConfig.oninit = callback;
-      }
-      var node = (document.body || document.documentElement || document.getElementsByTagName('head')[0]);
-      for (var id in srcs) {
-        if (document.getElementById(id)) continue;
-        if (node) {
-          var s = document.createElement('script');
-          s.type = 'text/javascript';
-          s.id = id;
-          s.src = srcs[id];
-          node.appendChild(s);
-        } else {
-          document.write('\u003cscript type="text/javscript" src="' + srcs[id] + '" id="' + id + '"\u003e\u003c/script\u003e');
-        }
-      }
-      callback();
-    })({
-      "browser-ponies-script": "https://panzi.github.io/Browser-Ponies/browserponies.js",
-      "browser-ponies-config": "https://panzi.github.io/Browser-Ponies/basecfg.js"
-    }, {
-      "baseurl": "https://panzi.github.io/Browser-Ponies/",
-      "fadeDuration": 500,
-      "volume": 0,
-      "fps": 25,
-      "speed": 3,
-      "audioEnabled": true,
-      "showFps": false,
-      "showLoadProgress": true,
-      "speakProbability": 0.1,
-      "spawn": {
-        "applejack": 1,
-        "fluttershy": 1,
-        "pinkie pie": 1,
-        "rainbow dash": 1,
-        "rarity": 1,
-        "twilight sparkle": 1
-      }
-    }); void (0)
-  }
-}
-
-if (getCookie('feature7') === "true") {
-  (function (srcs, cfg) {
-    var cbcount = 1;
-    var callback = function () {
-      --cbcount;
-      if (cbcount === 0) {
-        BrowserPonies.setBaseUrl(cfg.baseurl);
-        if (!BrowserPoniesBaseConfig.loaded) {
-          BrowserPonies.loadConfig(BrowserPoniesBaseConfig);
-          BrowserPoniesBaseConfig.loaded = true;
-        }
-        BrowserPonies.loadConfig(cfg);
-        if (!BrowserPonies.running()) BrowserPonies.start();
-      }
-    };
-    if (typeof (BrowserPoniesConfig) === "undefined") {
-      window.BrowserPoniesConfig = {};
-    }
-    if (typeof (BrowserPoniesBaseConfig) === "undefined") {
-      ++cbcount;
-      BrowserPoniesConfig.onbasecfg = callback;
-    }
-    if (typeof (BrowserPonies) === "undefined") {
-      ++cbcount;
-      BrowserPoniesConfig.oninit = callback;
-    }
-    var node = (document.body || document.documentElement || document.getElementsByTagName('head')[0]);
-    for (var id in srcs) {
-      if (document.getElementById(id)) continue;
-      if (node) {
-        var s = document.createElement('script');
-        s.type = 'text/javascript';
-        s.id = id;
-        s.src = srcs[id];
-        node.appendChild(s);
-      } else {
-        document.write('\u003cscript type="text/javscript" src="' + srcs[id] + '" id="' + id + '"\u003e\u003c/script\u003e');
-      }
-    }
-    callback();
-  })({
-    "browser-ponies-script": "https://panzi.github.io/Browser-Ponies/browserponies.js",
-    "browser-ponies-config": "https://panzi.github.io/Browser-Ponies/basecfg.js"
-  }, {
-    "baseurl": "https://panzi.github.io/Browser-Ponies/",
-    "fadeDuration": 500,
-    "volume": 1,
-    "fps": 25,
-    "speed": 3,
-    "audioEnabled": true,
-    "showFps": false,
-    "showLoadProgress": true,
-    "speakProbability": 0.1,
-    "spawn": {
-      "applejack": 1,
-      "fluttershy": 1,
-      "pinkie pie": 1,
-      "rainbow dash": 1,
-      "rarity": 1,
-      "twilight sparkle": 1
-    }
-  }); void (0)
-}
-/*
 const app = document.getElementById("app");
 const webamp = new Webamp({
   // Optional.
@@ -283,7 +150,7 @@ if (document.cookie === "" || document.cookie === null) {
     }
   }
 }
-/*/
+
 function BeatsUntilMidnight() {
   var currentBeats = parseFloat(GetSwatchTime(false));
   var totalBeatsInDay = 1000;
@@ -327,14 +194,27 @@ function isSwatchSunday() {
 document.addEventListener("DOMContentLoaded", function () {
   showForumStatus();
   setInterval(updateCountdown, 1000); // Update every second
-});
 
-// Clock Emoji
-const emoji = document.querySelector('.emoji');
-emoji.textContent = Tmj.getTimeMoji(new Date(), 'clock');
-// Landscape Emoji
-const landscape = document.querySelector('.landscape');
-landscape.textContent = Tmj.getTimeMoji(new Date(), 'landscape');
+  // Clock Emoji
+  const emoji = document.querySelector('.emoji');
+  if (emoji) {
+    emoji.textContent = Tmj.getTimeMoji(new Date(), 'clock');
+  }
+
+  // Landscape Emoji
+  const landscape = document.querySelector('.landscape');
+  if (landscape) {
+    landscape.textContent = Tmj.getTimeMoji(new Date(), 'landscape');
+  }
+
+  // Set initial highlight on page load
+  updateHighlightTime();
+  // Update highlight every second
+  setInterval(updateHighlightTime, 1000);
+
+  // Start the clock
+  startTime();
+});
 
 var highlightElement;
 
@@ -355,26 +235,19 @@ function updateHighlightTime() {
   // Get the element to be highlighted (assuming an element with ID "time")
   highlightElement = document.getElementById("time");
 
-  // Create a span element to wrap the highlighted text
-  var highlightSpan = document.createElement("span");
-  highlightSpan.textContent = '#' + h + m + s;
-  highlightSpan.style.backgroundColor = hex; // Set background for highlighting
+  if (highlightElement) {
+    // Create a span element to wrap the highlighted text
+    var highlightSpan = document.createElement("span");
+    highlightSpan.textContent = '#' + h + m + s;
+    highlightSpan.style.backgroundColor = hex; // Set background for highlighting
 
-  // Clear previous content (if any)
-  highlightElement.innerHTML = "";
+    // Clear previous content (if any)
+    highlightElement.innerHTML = "";
 
-  // Append the highlighted time within the element
-  highlightElement.appendChild(highlightSpan);
+    // Append the highlighted time within the element
+    highlightElement.appendChild(highlightSpan);
+  }
 }
-
-// Assuming you have an element with ID "time"
-highlightElement = document.getElementById("time");
-
-// Set initial highlight on page load
-//updateHighlightTime();
-
-// Update highlight every second
-setInterval(updateHighlightTime, 1000);
 
 function startTime() {
   const today = new Date();
@@ -384,7 +257,10 @@ function startTime() {
   let ampm = h >= 12 ? 'PM' : 'AM';
   m = checkTime(m);
   s = checkTime(s);
-  document.getElementById('clock').innerHTML = h + ":" + m + ":" + s + " " + ampm;
+  const clockElement = document.getElementById('clock');
+  if (clockElement) {
+    clockElement.innerHTML = h + ":" + m + ":" + s + " " + ampm;
+  }
 
   // get a new date (locale machine date time)
   var date = new Date();
@@ -393,9 +269,11 @@ function startTime() {
   // get the time as a string
   // var time = date.toLocaleTimeString();
 
-  // find the html element with the id of time
-  // set the innerHTML of that element to the date a space the time
-  document.getElementById('date').innerHTML = n;
+  // find the html element with the id of date
+  const dateElement = document.getElementById('date');
+  if (dateElement) {
+    dateElement.innerHTML = n;
+  }
   setTimeout(startTime, 1000);
 }
 
