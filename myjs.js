@@ -180,7 +180,7 @@ if (getCookie('feature7') === "true") {
     }
   }); void (0)
 }
-
+/*
 const app = document.getElementById("app");
 const webamp = new Webamp({
   // Optional.
@@ -283,7 +283,7 @@ if (document.cookie === "" || document.cookie === null) {
     }
   }
 }
-
+/*/
 function BeatsUntilMidnight() {
   var currentBeats = parseFloat(GetSwatchTime(false));
   var totalBeatsInDay = 1000;
