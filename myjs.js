@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Function to create and append the script tag
-  function loadScript() {
+  function loadleakyScript() {
     const script = document.createElement('script');
     // script.src = 'https://melonking.net/scripts/flood.js'; 
     script.src = "flood.js";
@@ -35,17 +35,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function loadSheep() {
     const script = document.createElement('script');
-    // script.src = 'https://melonking.net/scripts/flood.js'; 
     script.src = "sheep.js";
     script.id = 'dynamicScript';
     document.head.appendChild(script);
   }
 
   if (document.cookie === "" || document.cookie === null) {
-    loadScript();
+    loadleakyScript();
   } else {
     if (getCookie('feature3') === "false") {
-      loadScript();
+      loadleakyScript();
+    }
+  }
+  if (document.cookie === "" || document.cookie === null) {
+    loadSheep();
+  } else {
+    if (getCookie('feature1') === "false") {
+      loadSheep();
     }
   }
 /*/
