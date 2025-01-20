@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function loadSheep() {
     const script = document.createElement('script');
-    script.src = "sheep.js";
+    script.src = "esheep.js";
     script.id = 'dynamicScript';
     document.head.appendChild(script);
   }
