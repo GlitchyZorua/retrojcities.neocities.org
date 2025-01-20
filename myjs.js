@@ -148,12 +148,16 @@ if (getCookie('feature3') === "false"){
 });
  // 
 if (document.cookie === "" || document.cookie === null) {
+  if (app) {
     webamp.renderWhenReady(app);
-  } else {
-    if (getCookie('feature6') === "false") {
-         webamp.renderWhenReady(app);
+  }
+} else {
+  if (getCookie('feature6') === "false") {
+    if (app) {
+      webamp.renderWhenReady(app);
     }
   }
+}
 
 
 
