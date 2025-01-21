@@ -45,6 +45,7 @@ emoji.textContent = Tmj.getTimeMoji(new Date(), 'clock');
 // Landscape Emoji
 const landscape = document.querySelector('.landscape');
 landscape.textContent = Tmj.getTimeMoji(new Date(), 'landscape');
+
         } else {
             console.error('Failed to load the zodiac sign for today.')
         }
