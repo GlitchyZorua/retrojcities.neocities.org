@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
       loadSheep();
     }
   }
-/*/
+
   const app = document.getElementById("app");
   const webamp = new Webamp({
     // Optional.
@@ -157,7 +157,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }
   }
-  /*/
 
   function BeatsUntilMidnight() {
     var currentBeats = parseFloat(GetSwatchTime(false));
