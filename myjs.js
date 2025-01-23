@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
       loadSheep();
     }
   }
-
+/*/
   const app = document.getElementById("app");
   if (app) {
     const webamp = new Webamp({
@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     console.error("Element with ID 'app' not found.");
   }
-
+/*/
   function BeatsUntilMidnight() {
     var currentBeats = parseFloat(GetSwatchTime(false));
     var totalBeatsInDay = 1000;
