@@ -51,7 +51,6 @@ flood.html.message = undefined;
 flood.audio = {};
 flood.audio.flush = undefined;
 flood.audio.clunk = undefined;
-const floodlevelMessage = ` - Flood Percentage: ${flood.level}%`;
 
 // Setup event!
 window.addEventListener("DOMContentLoaded", async () => {
@@ -114,7 +113,7 @@ function doBilge() {
         // Its too soon to bilge again!
         flood.audio.clunk.currentTime = 0;
         flood.audio.clunk.play();
-        flood.html.message.innerHTML = flood.msg.toosoon+floodlevelMessage;
+        flood.html.message.innerHTML = flood.msg.toosoon + ` - Flood Percentage: ${flood.level}%`;
         return;
     }
     flood.lastBilge = Date.now();
@@ -143,7 +142,7 @@ async function updateFloodLevel(doBilge = false, doQuickUpdate = false) {
 // Update the visuals
 function renderWater() {
  // const floodOz = (flood.level / 100) * flood.maxLevel
- 
+ const floodlevelMessage = ` - Flood Percentage: ${flood.level}%`;
     if (flood.logicLevel == flood.level) {
         return; // Save the processing time, nothing to do!
     }
