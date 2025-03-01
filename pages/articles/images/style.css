@@ -1,0 +1,24 @@
+body {
+    background-color: #000000;
+    text-align: center;
+    color: #ffffff;
+    font-family: Liberatoin Mono, monospace;
+}
+
+a:link {
+  color: cyan;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
