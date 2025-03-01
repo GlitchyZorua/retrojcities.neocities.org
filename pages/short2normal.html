@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Shorts Link Converter</title>
+</head>
+<body>
+    <h1>YouTube Shorts Link Converter</h1>
+    <p>Enter a YouTube Shorts link below:</p>
+    <input type="text" id="shortsLink" placeholder="Enter YouTube Shorts Link">
+    <button onclick="convertLink()">Convert</button>
+
+    <p>Converted Link:</p>
+    <p id="convertedLink"></p>
+
+    <script>
+        function convertLink() {
+            const shortsLink = document.getElementById("shortsLink").value;
+            const videoId = extractVideoId(shortsLink);
+
+            if (videoId) {
+                const convertedLink = `https://www.youtube.com/watch?v=${videoId}`;
+                document.getElementById("convertedLink").textContent = convertedLink;
+            } else {
+                document.getElementById("convertedLink").textContent = "Invalid Shorts Link";
+            }
+        }
+
+        function extractVideoId(url) {
+            const regex = /(?:youtu.be\/|youtube.com\/(?:v\/|embed\/|watch\?v=|shorts\/))([\w\-]+)(?:\S+)?/;
+            const match = url.match(regex);
+            return match ? match[1] : null;
+        }
+    </script>
+</body>
+</html>

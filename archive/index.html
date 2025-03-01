@@ -1,0 +1,223 @@
+<link rel="stylesheet" type="text/css" href="css.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta charset="utf-8" />
+<title>RetroJCity</title>
+ <center>
+  <div align="right" nowrap style="padding-bottom:4px" width="100%">
+  <font size="-1">
+  <a href="https://neocities.org/dashboard">Personalize this page</a>&nbsp;|&nbsp;
+  <a href="https://neocities.org/signin">Sign in</a></font></div><img alt="Sign In" height="110" src="logo.gif" width="400">
+  <br>
+  <br>
+  <!-- <form action="/web//http://www.google.com/search" name="url">-->
+  <script defer>
+  //<!--
+function togDisp(e){stopB(e);var elems=document.getElementsByName('more');for(var i=0;i<elems.length;i++){var obj=elems[i],dp="";if(obj.style.display==""){dp="none";}obj.style.display=dp;}return false;}
+function stopB(e){if(!e)e=window.event;e.cancelBubble=true;}
+document.onclick=function(event){var elems=document.getElementsByName('more');if(elems[0].style.display==""){togDisp(event);}}
+//-->
+</script><table border="0" cellspacing="0" cellpadding="4">
+  <tr><td nowrap>
+    <font size="-1">
+      <b>Web</b>
+      &nbsp;&nbsp;&nbsp;&nbsp;<a class="q" href="https://neocities.org">Neocities</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a class="q" href="https://www.startpage.com/?cat=images">Images</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a class="q" href="https://piped.video">Video</a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <a class="q" href="">News</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;<a class="q" href="https://www.openstreetmap.org/">Maps</a>
+  &nbsp;&nbsp;&nbsp;&nbsp;<b><a href="javascript:alert('soon.')" class="q" onclick="this.blur();return togDisp(event)">more&nbsp;&raquo;</a></b>
+  <span name="more" id="more" style="display:none;position:absolute;background:#000;border:1px solid #369;margin:-.5ex 2ex;padding:0 0 .5ex .8ex;width:16ex;line-height:1.9;z-index:1000" onclick="stopB(event)">
+    <a href="#" onclick="return togDisp(event)"><img border="0" src="x2.gif" width="12" height="12" alt="Close menu" align="right" hspace="4" vspace="4"></a>
+    <a class="q" href="https://write.as/">Make Blogs</a><br>
+    <a class="q" href="blogs.html">My Blogs</a><br>
+    <a class="q" href="microblogs.html">My Micro-Blogs</a><br>
+    <a class="q" href="games.html">Games</a><br>
+    <a class="q" href="achive.html">Archive</a><br>
+    <a class="q" href="https://z-lib.is/">Books</a><br>
+    <a class="q" href="javascript:alert('stop trying to access dead google products')">Froogle</a><br>
+    <a class="q" href="javascript:alert('no.')">Groups</a><br>
+    <a class="q" href="https://en.wikipedia.org/wiki/Criticism_of_patents?useskin=vector">Patents</a><br>
+    
+    <a href="javascript:alert('nothing yet.')" class="q"><b>even more &raquo;</b></a></span></font></td></tr></table>
+    <table cellpadding="0" cellspacing="0"><tr valign="top"><td width="25%">&nbsp;</td><td align="center" nowrap><input name="hl" type="hidden" value="en"><input type="hidden" name="ie" value="ISO-8859-1"><input autofocus placeholder="Search..." type="text" id="url" size="55"><br>
+    <input name="gowww" type="submit" value="StartPage Search">
+    <input name="gonc" type="submit" value="Neocities Search">
+    <input name="luck" type="submit" value="I'm Feeling Lucky"></td>
+    <td nowrap width="25%"><font size="-2">&nbsp;&nbsp;<a href="javascript:alert('There is no advanced search.')">Advanced Search</a>
+      <br>&nbsp;&nbsp;<a href="https://www.startpage.com/do/settings?query&lui=english">Preferences</a>
+      <br>&nbsp;&nbsp;<a href="javascript:alert('we only speak english. you can speak english, right?')">Language Tools</a></font></td></tr></table></form><br><table><tr><td valign="center">
+        <img src="hpp-cart-glitch.gif" alt="" width="40" height="22"></td><td valign="center"><font size="-1">RetroJCity is non-profit. we don't make money from hosting this site on Neocities. <br><a href="">You can join the Discord Server, if you wish!</a> <b>I don't accept donations as of right now.</b> </font></td></tr></table>
+        <br><br>
+        <style>
+        @font-face {
+           font-family: "clockfont";
+           src: url("alarm_clock.ttf");
+        }
+
+
+      .clock {
+        font-family: clockfont;
+          font-size: 40px;
+        }
+        </style>
+       <body onload="startTime()">
+        <div id="clockfont">
+          <div id="clock" class="clock"></div>
+        </div>
+      </body>
+      
+<script>
+  function startTime() {
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  let ampm = h >= 12 ? 'PM' : 'AM';
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('clock').innerHTML =  h + ":" + m + ":" + s+" "+ampm;
+  setTimeout(startTime, 1000);
+}
+
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+document.addEventListener("DOMContentLoaded", function() {
+    var url = document.getElementById('url');
+    var gowww = document.getElementsByName('gowww')[0];
+    var gonc = document.getElementsByName('gonc')[0];
+    var luck = document.getElementsByName('luck')[0];
+
+    function searchstartpage() {
+      if (url.value) {
+        window.location.replace("https://www.startpage.com/sp/search?query=" + encodeURI(url.value));
+      }
+    }
+
+    function searchneocities() {
+      if (url.value) {
+        window.location.replace("https://neocities.org/browse?sort_by=followers&tag=" + encodeURI(url.value));
+      }
+    }
+
+    function searchluck() {
+      if (url.value === "the cake is a lie") {
+        window.location.replace('https://www.youtube.com/watch?v=JAw3V8ScLeI');
+        return;
+      }
+      if (url.value === "fandom") {
+        window.location.replace('https://www.youtube.com/watch?v=qcfuA_UAz3I');
+        return;
+      }
+      if (url.value === "orgin") {
+        window.location.replace('https://windows93.net');
+        return;
+      }
+      if (url.value === "list") {
+        window.location.replace('https://github.com/GlitchyZorua/GlitchyZorua.github.io/blob/main/projects/random/neocities/random.html');
+        return;
+      }
+      if (url.value === "ding"){
+        alert('fries are ready.');
+        return;
+      }
+      if (url.value == "computer"){
+        window.location.replace('https://www.youtube.com/watch?v=aAtF-Zzdnc8')
+        return;
+      }
+      if (url.value == "surprise"){
+        window.location.replace('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+        return;
+      }
+      if (url.value == "sdjlkfgjfsdlkgfdjglfkdjgfdlkg") {
+        alert('you\'ve looked in the code. congrats.')
+      }
+      if (url.value == "shoot em up"){
+          var KICKASSVERSION='2.0'
+           var s = document.createElement('script')
+           s.type='text/javascript'
+           document.body.appendChild(s)
+           s.src='//hi.kickassapp.com/kickass.js'
+           void(0); 
+      }
+      if (url.value == "make text go boom boom"){
+         (function () {var s = document.createElement('script');s.setAttribute('src', 'http://fontbomb.ilex.ca/js/main.js');document.body.appendChild(s);}());
+      }
+      if (url.value == "best cooking site"){
+      window.location.replace("https://based.cooking/");
+      }
+      if (url.value) {
+        window.location.replace("https://GlitchyZorua.github.io/projects/random/neocities/random.html");
+      }
+    }
+  });
+    gowww.addEventListener("click", searchstartpage);
+    gonc.addEventListener("click", searchneocities);
+    luck.addEventListener("click", searchluck);
+
+  url.addEventListener('keydown', (event) => {
+  /*/
+  if (event.shiftKey) {
+    keys.Shift = true;
+  }
+  if (event.key === "Enter") {
+    keys.Enter = true;
+  }
+/*/
+      if (event.shiftKey && event.key === "Enter"){
+       searchneocities();
+       return;
+      }
+      if (!event.shiftKey && event.key === 'Enter') {
+        searchstartpage();
+        return;
+      }
+    });
+    </script>
+        <!--
+        === solarize ===
+        brightness: 0.8
+        power: 1
+        colorize: 0
+        === Brightness & Contrast ===
+        contrast: 0.75
+        brightness: -0.2
+        === Rgb shift ===
+        amount: 0
+        === instacolor ===
+        strength: 0
+        style:1
+        === jitter ===
+        amount: 0.2
+        speed:1
+        === edges ===
+        amount: 0.46
+        passthru: 0.49
+
+        https://photomosh.com/
+        -->
+        <br><br><font size="-1"><a href="https://glitchyzorua.github.io">GitHub Mirror</a> - <a href="https://neocities.org/site/retrojcities">Neocities Profile</a> - <a href="about.html">About Me</a></font><p>🄯 2023 RetroJCity</p><br><i>This site isn't owned or endorsed by Google.</i></body></html><!--
+             <a href="https://www.websiteout.net/counter.php"><img src="//counter.websiteout.net/compte.php?S=GlitchyZorua.github.io&amp;C=6&amp;D=0&amp;N=0&amp;M=0" alt="web hit counter" border="0"></a><br>
+<!-- good fucking god i wish i added this sooner -->
+    <br>
+    <a href="https://www.websiteout.net/counter.php"><img src="//counter.websiteout.net/compte.php?S=GlitchyZorua.github.io&amp;C=6&amp;D=0&amp;N=0&amp;M=0" alt="web hit counter" border="0">
+    <a href="https://flagcounter.me/details/dJu"><img src="https://flagcounter.me/dJu/" alt="Flag Counter"></a><br>  
+    <!-- FILE ARCHIVED ON 17:33:47 Jan 17, 2007 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 22:46:08 Oct 30, 2023.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+-->
+<!--
+playback timings (ms):
+  exclusion.robots: 1.391 (7)
+  exclusion.robots.policy: 1.305 (7)
+  cdx.remote: 0.609 (7)
+  esindex: 0.082 (7)
+  LoadShardBlock: 548.453 (24)
+  PetaboxLoader3.datanode: 557.832 (25)
+  load_resource: 348.529
+  PetaboxLoader3.resolve: 236.287
+-->
