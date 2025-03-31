@@ -109,6 +109,11 @@
       "name": "s.matdoes.dev",
       "url": "https://s.matdoes.dev/search?q=",
       "disabled": false
+    },
+    {
+      "name": "Google Answers",
+      "url": "https://www.google.com/search?as_sitesearch=answers.google.com&q=",
+      "disabled": false
     }
   ]
 }
