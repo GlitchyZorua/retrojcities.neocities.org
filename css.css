@@ -47,9 +47,6 @@ a:active {
 }
 a:visited { color:#ba5fa5; }
 
-body, td, a, p, .h {
-  font-size:13px;
-}
 
 .h {
   color:cyan;
@@ -164,9 +161,6 @@ body, td, a, p, .h {
    font-size: 40px;
  }
 
- span.small {
-    font-size: smaller;
-  }
         .page-container {
             max-width: 1200px;
             margin: 0 auto;
