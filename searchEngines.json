@@ -81,8 +81,13 @@
       "disabled": false
     },
     {
-      "name": "wiby",
+      "name": "wiby.me",
       "url": "https://wiby.me/?q=",
+      "disabled": false
+    },
+    {
+      "name": "wiby.org",
+      "url": "https://wiby.org/?q=",
       "disabled": false
     },
     {
@@ -113,6 +118,50 @@
     {
       "name": "Google Answers",
       "url": "https://www.google.com/search?as_sitesearch=answers.google.com&q=",
+      "disabled": false
+    },{
+      "name": "Marginalia Search",
+      "url": "https://marginalia-search.com/search?query=",
+      "disabled": false
+    },{
+      "name": "Marginalia Search (Old)",
+      "url": "https://old-search.marginalia.nu/search?query=",
+      "disabled": false
+    },{
+      "name": "Dogpile",
+      "url": "https://www.dogpile.com/serp?q=",
+      "disabled": false
+    },{
+      "name": "Yandex",
+      "url": "https://yandex.com/search/?text=",
+      "disabled": false
+    },{
+      "name": "Baidu",
+      "url": "https://www.baidu.com/s?wd=",
+      "disabled": false
+    },{
+      "name": "Looksmart",
+      "url": "https://results.looksmart.com/serp?q=",
+      "disabled": false
+    },{
+      "name": "DirectHit",
+      "url": "https://www.directhit.com/web?q=",
+      "disabled": false
+    },{
+      "name": "Ask.com",
+      "url": "https://www.ask.com/web?q=",
+      "disabled": false
+    },{
+      "name": "Brave Search",
+      "url": "https://search.brave.com/search?q=",
+      "disabled": false
+    },{
+      "name": "Excite",
+      "url": "https://results.excite.com/serp?q=",
+      "disabled": false
+    },{
+      "name": "OoCities.org",
+      "url": "https://oocities.org/?q=h#gsc.tab=0&gsc.q=",
       "disabled": false
     }
   ]
