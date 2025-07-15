@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>88x31 Button Copy Tool</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    select, textarea, button {
+      margin-top: 10px;
+      display: block;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    img {
+      margin-top: 10px;
+      border: 1px solid #ccc;
+    }
+
+    .button-preview {
+      margin-top: 20px;
+    }
+
+    .copied {
+      color: green;
+      font-size: 14px;
+      display: none;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="../css.css">
+<html><head>
+ <div id="gbar">
+                      <div class="gbh" style="right:0"></div><table class="tb" style="clear:left" width="100%"><tr>
+                          <a href="./index.html" title="Go to Home">
+                            <img src="../logo.gif" width="244" height="66" alt="logo" border="0" vspace="12"></a></td>
+                            <td style="padding:0 0 7px;padding-left:8px" valign="top" width="100%"><table class="tb" style="margin-top:25px"><tr><td class="tc" nowrap><input type="hidden" name="site" value="404"><input type="hidden" name="hl" value="en">
+                                </span></td></tr></table></td></tr></form></table><table border="0" cellpadding="0" cellspacing="0" width="100%"><tr><td bgcolor="">
+                                  </table><table border="0" cellpadding="0" cellspacing="0" width="100%" bgcolor="blue"><tr><td nowrap><font size="+1">&nbsp;<b>88x31 Button</b></font>
+                                  </td></table><table border="0" cellpadding="0" cellspacing="0"><tr><td class="j"><br>
+                                    Pick a varient of the 88x31 you wanna use.<br><br></table>
+                                      </table><center><p><hr class="z"><div style="padding:2px" class="t n bt"></div><br></center>
+                                      </body></html>
+  <select id="buttonSelect">
+    <option value="" disabled selected>Select a button</option>
+    <option value="black">Black</option>
+    <option value="red">Edgy Red</option>
+    <option value="yellow">Piss Yellow</option>
+    <option value="green">Touch Grass Green</option>
+    <option value="blue">SKCro Blue</option>
+  </select>
+
+  <div class="button-preview" id="preview"></div>
+
+  <textarea id="buttonCode" rows="4" readonly></textarea>
+
+  <button onclick="copyToClipboard()">Copy HTML Code</button>
+  <div class="copied" id="copiedMsg">Copied!</div>
+
+  <script>
+    const buttonData = {
+      black: {
+        url: "https://retrojcity.neocities.org/",
+        img: "retrojcity.png",
+        width: 88,
+        height: 31
+      },
+      red: {
+        url: "https://retrojcity.neocities.org/",
+        img: "retrojcityRED.png",
+        width: 88,
+        height: 31
+      },
+
+      yellow: {
+        url: "https://retrojcity.neocities.org/",
+        img: "retrojcityYELLOW.png",
+        width: 88,
+        height: 31
+      },
+      green: {
+        url: "https://retrojcity.neocities.org/",
+        img: "retrojcityGREEN.png",
+        width: 88,
+        height: 31
+      },
+    blue: {
+        url: "https://retrojcity.neocities.org/",
+        img: "retrojcityBLUE.png",
+        width: 88,
+        height: 31
+      }
+    };
+
+    const select = document.getElementById('buttonSelect');
+    const preview = document.getElementById('preview');
+    const textarea = document.getElementById('buttonCode');
+    const copiedMsg = document.getElementById('copiedMsg');
+
+    select.addEventListener('change', () => {
+      const key = select.value;
+      const data = buttonData[key];
+      if (!data) return;
+
+      // Show button image preview
+      preview.innerHTML = `<a href="${data.url}" target="_blank">
+        <img src="${data.img}" width="${data.width}" height="${data.height}" alt="retrojcity ${key} button">
+      </a>`;
+
+      // Fill textarea with HTML code
+      const htmlCode = `<a href="${data.url}" target="_blank"><img src="${data.img}" width="${data.width}" height="${data.height}" alt="retrojcity ${key} button"></a>`;
+      textarea.value = htmlCode;
+      copiedMsg.style.display = 'none';
+    });
+
+    function copyToClipboard() {
+      textarea.select();
+      textarea.setSelectionRange(0, 99999); // For mobile devices
+      document.execCommand("copy");
+
+      copiedMsg.style.display = 'block';
+      setTimeout(() => copiedMsg.style.display = 'none', 2000);
+    }
+  </script>
+
+</body>
+</html>
