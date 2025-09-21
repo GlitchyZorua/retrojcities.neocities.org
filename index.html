@@ -48,13 +48,6 @@ function loadleakyScript() {
     }
   }
   /*/
-  function msgbox(shit){
-    if (window.top.location.href === "windows93.net" || "windows93.xyz") {
-      window.top.$alert(shit)
-    } else {
-      alert(msg)
-    }
-  }
 </script>
 
 </body>
@@ -176,7 +169,7 @@ document.onclick=function(event){var elems=document.getElementsByName('more');if
   &nbsp;&nbsp;&nbsp;&nbsp;<a class="q" href="https://piped.video">Video</a>&nbsp;&nbsp;&nbsp;&nbsp;
   <a class="q" href="/pages/news">News</a>
   &nbsp;&nbsp;&nbsp;&nbsp;<a class="q" href="https://www.openstreetmap.org/">Maps</a>
-  &nbsp;&nbsp;&nbsp;&nbsp;<b><a href="javascript:msgbox('soon.')" class="q" onclick="this.blur();return togDisp(event)">more&nbsp;&raquo;</a></b>
+  &nbsp;&nbsp;&nbsp;&nbsp;<b><a href="javascript:alert('soon.')" class="q" onclick="this.blur();return togDisp(event)">more&nbsp;&raquo;</a></b>
   <span name="more" id="more" style="display:none;position:absolute;background:#000;border:1px solid #369;margin:-.5ex 2ex;padding:0 0 .5ex .8ex;width:16ex;line-height:1.9;z-index:1000" onclick="stopB(event)">
     <a href="#" onclick="return togDisp(event)"><img border="0" src="x2.gif" width="12" height="12" alt="Close menu" align="right" hspace="4" vspace="4"></a>
     <a class="q" href="https://write.as/">Make Blogs</a><br>
@@ -185,18 +178,18 @@ document.onclick=function(event){var elems=document.getElementsByName('more');if
     <a class="q" href="games.html">Games</a><br>
     <a class="q" href="archive.html">Archive</a><br>
     <a class="q" href="https://openlibrary.org/">Books</a><br> <!-- rip zlib -->
-    <a class="q" href="javascript:msgbox('stop trying to access dead google products')">Froogle</a><br>
-    <a class="q" href="javascript:msgbox('no.')">Groups</a><br>
+    <a class="q" href="javascript:alert('stop trying to access dead google products')">Froogle</a><br>
+    <a class="q" href="javascript:alert('no.')">Groups</a><br>
     <a class="q" href="https://en.wikipedia.org/wiki/Criticism_of_patents?useskin=vector">Patents</a><br>
     
-    <a href="javascript:msgbox('nothing yet.')" class="q"><b>even more &raquo;</b></a></span></span></td></tr></table>
+    <a href="javascript:alert('nothing yet.')" class="q"><b>even more &raquo;</b></a></span></span></td></tr></table>
     <table cellpadding="0" cellspacing="0"><tr valign="top"><td width="25%">&nbsp;</td><td align="center" nowrap><input name="hl" type="hidden" value="en"><input type="hidden" name="ie" value="ISO-8859-1"><input autofocus placeholder="Search..." type="text" id="url" size="55"><script src="searchthing.js"></script><select id="searchEngineSelect"></select><br>
     <input name="gowww" type="submit" value="WWW Search">
     <input name="gonc" type="submit" value="Neocities Search">
     <input name="luck" type="submit" value="I'm Feeling Lucky"></td>
-    <td nowrap width="25%">&nbsp;&nbsp;<a href="javascript:msgbox('There is no advanced search.')">Advanced Search</a>
+    <td nowrap width="25%">&nbsp;&nbsp;<a href="javascript:alert('There is no advanced search.')">Advanced Search</a>
       <br>&nbsp;&nbsp;<a href="./settings.html">Preferences</a> <!-- https://www.startpage.com/do/settings?query&lui=english -->
-      <br>&nbsp;&nbsp;<a href="javascript:msgbox('we only speak english. you can speak english, right?')">Language Tools</a>
+      <br>&nbsp;&nbsp;<a href="javascript:alert('we only speak english. you can speak english, right?')">Language Tools</a>
       <!-- <br>&nbsp;&nbsp;<a href="">Play Music</a>--></td></tr></table></form><br><table><tr><td valign="center">
       <!--
       <img src="tombstone-svgrepo-com.svg" alt="" width="50" height="33"></td><td valign="center"><span size="-1">R.I.P, Mr. Dark Goose; 2007 ~ 2024</b><br><br>-->
@@ -311,7 +304,7 @@ document.addEventListener("DOMContentLoaded", function() {
       if (url.value) {
        // const searchUrl = searchEngineSelect.value; + encodeURI(url.value);
        if (searchEngineSelect.value === "Google (No AI)"){
-         //msgbox('Click on the "Web" tab in the google search');
+         //alert('Click on the "Web" tab in the google search');
          window.location.assign(searchEngineSelect.value + encodeURI(url.value) + "&udm=14");
        } else {
         window.location.assign(searchEngineSelect.value + encodeURI(url.value));
@@ -342,7 +335,7 @@ document.addEventListener("DOMContentLoaded", function() {
         return;
       }
       if (url.value === "ding"){
-        msgbox('fries are ready.');
+        alert('fries are ready.');
         return;
       }
       if (url.value == "computer"){
@@ -354,7 +347,7 @@ document.addEventListener("DOMContentLoaded", function() {
         return;
       }
       if (url.value == "sdjlkfgjfsdlkgfdjglfkdjgfdlkg") {
-        msgbox('you\'ve looked in the code. congrats. nothing will happen.');
+        alert('you\'ve looked in the code. congrats. nothing will happen.');
         return;
       }
       if (url.value == "shoot em up"){
@@ -508,7 +501,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // This is what happens. If we fucking have two mirrors, similar shit. Messy code like this.
     // oh well. i guess thats what i get for using GitHub Pages.
     function noDiscord(){
-      msgbox("Discord server is closed indefinitely, sorry! ");
+      alert("Discord server is closed indefinitely, sorry! ");
       }
 if (window.location.host === "glitchyzorua.github.io" || window.location.host === "GlitchyZorua.github.io") { 
       document.write("<br><br><font size=\"-1\"><a href=\"https:\/\/retrojcities.neocities.org\">Neocities Site<\/a> - <a href=\"https:\/\/github.com\/GlitchyZorua\">GitHub Profile<\/a> - <a href=\"about.html\">About Me<\/a> - <a href=\"https:\/\/users3.smartgb.com\/g\/g.php?a=s&i=g36-34400-4f\">Sign My Guestbook<\/a> - <a href=\"\/pages\/news\">Site News<\/a> - <a href=\"https://my.liberaforms.org/retrojcity-im-feeling-lucky-removal-request\">IFL Opt-Out<\/a> - <a href=\"\/pages\/articles\/articles\">Blogs<\/a> - <a href=\"\/pages\/microblogs.html\">Micro-Blog<\/a> - <a href=\"https://letters.melonland.net/join.php?list=5\">Newsletter<\/a> - <a href=\"https:\/\/matrix.to\/#\/#RetroJSpace:matrix.org\">Matrix<\/a> - <a href=\"https:\/\/wetdry.world\/@GlitchyZorua\/\">Mastodon<\/a> - <a href=\"https:\/\/forum.melonland.net\/index.php?action=profile;u=1880\">Melonland Forum<\/a> - <a href=\"bluesky.html\">BlueSky Bridge<\/a><\/font><p>\ud83c\udd2f 2023-2025 RetroJCity<\/p><br><br><br>");
