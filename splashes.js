@@ -136,15 +136,12 @@ var splashess = splashes[Math.floor(Math.random() * splashes.length)];
             while (c.charAt(0) === ' ') c = c.substring(1);
             if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length);
         return null;
+        }
     }
-  var fuckoff = "<i>"+splashess+"</i>";
-if (document.cookie === "" || document.cookie === null) {
-    document.write("<i>"+splashess+"</i>");
-    //document.getElementById('quotes').value = fuckoff;
+    if (document.cookie === "" || document.cookie === null) {
+    //document.write(fuckoff);
+document.getElementById("quotes").innerHTML = `<i>${splashess}</i>`;
   } else if (getCookie('feature8') === "false") {
-      //document.getElementById('quotes').value = fuckoff;
-      document.write("<i>"+splashess+"</i>");
-  } else {
-  
+ document.getElementById("quotes").innerHTML = `<i>${splashess}</i>`;
   }
-}
+
