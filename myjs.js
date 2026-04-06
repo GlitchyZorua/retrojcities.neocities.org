@@ -4,39 +4,12 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.replace('https://theoldnet.com/')
   }
 
-  //document.getElementById('UserAgent').value = navigator.userAgent;
-  function setCookie(cname, cvalue) {
-    document.cookie = cname + "=" + cvalue;
-  }
 
-  function getCookie(cname) {
-    let name = cname + "=";
-    let ca = document.cookie.split(';');
-    for (let i = 0; i < ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(name) == 0) {
-        return c.substring(name.length, c.length);
-      }
-    }
-    return "";
-  }
-  
- var sheep = new eSheep(); 
-if (document.cookie === "" || document.cookie === null) {
-    sheep.Start(); 
-  } else {
-    if (getCookie('feature1') === "false") {
-        sheep.Start(); 
-    }
-  }
-  
-   if (getCookie('feature5') === "true"){
+
+   if (getStorage('feature5') === "true"){
 (function (srcs,cfg) { var cbcount = 1; var callback = function () { -- cbcount; if (cbcount === 0) { BrowserPonies.setBaseUrl(cfg.baseurl); if (!BrowserPoniesBaseConfig.loaded) { BrowserPonies.loadConfig(BrowserPoniesBaseConfig); BrowserPoniesBaseConfig.loaded = true; } BrowserPonies.loadConfig(cfg); if (!BrowserPonies.running()) BrowserPonies.start(); } }; if (typeof(BrowserPoniesConfig) === "undefined") { window.BrowserPoniesConfig = {}; } if (typeof(BrowserPoniesBaseConfig) === "undefined") { ++ cbcount; BrowserPoniesConfig.onbasecfg = callback; } if (typeof(BrowserPonies) === "undefined") { ++ cbcount; BrowserPoniesConfig.oninit = callback; } var node = (document.body || document.documentElement || document.getElementsByTagName('head')[0]); for (var id in srcs) { if (document.getElementById(id)) continue; if (node) { var s = document.createElement('script'); s.type = 'text/javascript'; s.id = id; s.src = srcs[id]; node.appendChild(s); } else { document.write('\u003cscript type="text/javscript" src="'+ srcs[id]+'" id="'+id+'"\u003e\u003c/script\u003e'); } } callback();})({"browser-ponies-script":"https://panzi.github.io/Browser-Ponies/browserponies.js","browser-ponies-config":"https://panzi.github.io/Browser-Ponies/basecfg.js"},{"baseurl":"https://panzi.github.io/Browser-Ponies/","fadeDuration":500,"volume":0,"fps":25,"speed":3,"audioEnabled":true,"showFps":false,"showLoadProgress":true,"speakProbability":0.1,"spawn":{"applejack":1,"fluttershy":1,"pinkie pie":1,"rainbow dash":1,"rarity":1,"twilight sparkle":1}});void(0)
   }
-  if (getCookie('feature7') === "true"){
+  if (getStorage('feature7') === "true"){
 (function (srcs,cfg) { var cbcount = 1; var callback = function () { -- cbcount; if (cbcount === 0) { BrowserPonies.setBaseUrl(cfg.baseurl); if (!BrowserPoniesBaseConfig.loaded) { BrowserPonies.loadConfig(BrowserPoniesBaseConfig); BrowserPoniesBaseConfig.loaded = true; } BrowserPonies.loadConfig(cfg); if (!BrowserPonies.running()) BrowserPonies.start(); } }; if (typeof(BrowserPoniesConfig) === "undefined") { window.BrowserPoniesConfig = {}; } if (typeof(BrowserPoniesBaseConfig) === "undefined") { ++ cbcount; BrowserPoniesConfig.onbasecfg = callback; } if (typeof(BrowserPonies) === "undefined") { ++ cbcount; BrowserPoniesConfig.oninit = callback; } var node = (document.body || document.documentElement || document.getElementsByTagName('head')[0]); for (var id in srcs) { if (document.getElementById(id)) continue; if (node) { var s = document.createElement('script'); s.type = 'text/javascript'; s.id = id; s.src = srcs[id]; node.appendChild(s); } else { document.write('\u003cscript type="text/javscript" src="'+ srcs[id]+'" id="'+id+'"\u003e\u003c/script\u003e'); } } callback();})({"browser-ponies-script":"https://panzi.github.io/Browser-Ponies/browserponies.js","browser-ponies-config":"https://panzi.github.io/Browser-Ponies/basecfg.js"},{"baseurl":"https://panzi.github.io/Browser-Ponies/","fadeDuration":500,"volume":1,"fps":25,"speed":3,"audioEnabled":true,"showFps":false,"showLoadProgress":true,"speakProbability":0.1,"spawn":{"applejack":1,"fluttershy":1,"pinkie pie":1,"rainbow dash":1,"rarity":1,"twilight sparkle":1}});void(0)
   }
   // Function to create and append the script tag
@@ -275,105 +248,109 @@ if (document.cookie === "" || document.cookie === null) {
     return i;
   }
 
-  var url = document.getElementById('url');
-  var gowww = document.getElementsByName('gowww')[0];
-  var gonc = document.getElementsByName('gonc')[0];
-  var luck = document.getElementsByName('luck')[0];
+});
 
-  function searchstartpage() {
-    if (url.value) {
-      window.location.assign("https://www.startpage.com/sp/search?query=" + encodeURI(url.value));
-    }
-  }
+    var url = document.getElementById('url');
+    var gowww = document.getElementsByName('gowww')[0];
+    var gonc = document.getElementsByName('gonc')[0];
+    var luck = document.getElementsByName('luck')[0];
 
-  function searchwww() {
-    if (url.value) {
-      // const searchUrl = searchEngineSelect.value; + encodeURI(url.value);
-      if (searchEngineSelect.value === "Google (No AI)") {
-        //alert('Click on the "Web" tab in the google search');
-        window.location.assign(searchEngineSelect.value + encodeURI(url.value) + "&udm=14");
-      } else {
-        window.location.assign(searchEngineSelect.value + encodeURI(url.value));
+    function searchstartpage() {
+      if (url.value) {
+        window.location.assign("https://www.startpage.com/sp/search?query=" + encodeURI(url.value));
       }
     }
-  }
+    function searchwww() {
+      if (url.value) {
+       // const searchUrl = searchEngineSelect.value; + encodeURI(url.value);
+       if (searchEngineSelect.value === "Google (No AI)"){
+         //alert('Click on the "Web" tab in the google search');
+         window.location.assign(searchEngineSelect.value + encodeURI(url.value) + "&udm=14");
+       } else {
+        window.location.assign(searchEngineSelect.value + encodeURI(url.value));
+       }
+      }
+    }
+    function searchneocities() {
+      if (url.value) {
+        window.location.assign("https://neocities.org/browse?sort_by=followers&tag=" + encodeURI(url.value));
+      }
+    }
 
-  function searchneocities() {
-    if (url.value) {
-      window.location.assign("https://neocities.org/browse?sort_by=followers&tag=" + encodeURI(url.value));
-    }
-  }
-
-  function searchluck() {
-    if (url.value === "the cake is a lie") {
-      window.location.assign('https://www.youtube.com/watch?v=JAw3V8ScLeI');
-      return;
-    }
-    if (url.value === "fandom") {
-      window.location.assign('https://www.youtube.com/watch?v=qcfuA_UAz3I');
-      return;
-    }
-    if (url.value === "orgin") {
-      window.location.assign('https://windows93.net');
-      return;
-    }
-    if (url.value === "list") {
-      window.location.assign('https://github.com/GlitchyZorua/GlitchyZorua.github.io/blob/main/projects/random/neocities/random.html');
-      return;
-    }
-    if (url.value === "ding") {
-      alert('fries are ready.');
-      return;
-    }
-    if (url.value == "computer") {
-      window.location.assign('https://www.youtube.com/watch?v=aAtF-Zzdnc8')
-      return;
-    }
-    if (url.value == "surprise") {
-      window.location.assign('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
-      return;
-    }
-    if (url.value == "sdjlkfgjfsdlkgfdjglfkdjgfdlkg") {
-      alert('you\'ve looked in the code. congrats. nothing will happen.');
-      return;
-    }
-    if (url.value == "shoot em up") {
-      var KICKASSVERSION = '2.0'
-      var s = document.createElement('script')
-      s.type = 'text/javascript'
-      document.body.appendChild(s)
-      s.src = '//hi.kickassapp.com/kickass.js'
-      void (0);
-      return;
-    }
-    if (url.value == "make text go boom boom") {
-      (function () { var s = document.createElement('script'); s.setAttribute('src', 'http://fontbomb.ilex.ca/js/main.js'); document.body.appendChild(s); }());
-      return
-    }
-    if (url.value == "best cooking site") {
+    function searchluck() {
+      if (url.value === "the cake is a lie") {
+        window.location.assign('https://www.youtube.com/watch?v=JAw3V8ScLeI');
+        return;
+      }
+      if (url.value === "fandom") {
+        window.location.assign('https://www.youtube.com/watch?v=qcfuA_UAz3I');
+        return;
+      }
+      if (url.value === "orgin") {
+        window.location.assign('https://windows93.net');
+        return;
+      }
+      if (url.value === "list") {
+        window.location.assign('https://github.com/GlitchyZorua/GlitchyZorua.github.io/blob/main/projects/random/neocities/random.html');
+        return;
+      }
+      if (url.value === "ding"){
+        alert('fries are ready.');
+        return;
+      }
+      if (url.value == "computer"){
+        window.location.assign('https://www.youtube.com/watch?v=aAtF-Zzdnc8')
+        return;
+      }
+      if (url.value == "surprise"){
+        window.location.assign('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+        return;
+      }
+      if (url.value == "sdjlkfgjfsdlkgfdjglfkdjgfdlkg") {
+        alert('you\'ve looked in the code. congrats. nothing will happen.');
+        return;
+      }
+      if (url.value == "shoot em up"){
+        var KICKASSVERSION='2.0'
+           var s = document.createElement('script')
+           s.type='text/javascript'
+           document.body.appendChild(s)
+           s.src='//hi.kickassapp.com/kickass.js'
+           void(0); 
+           return;
+      }
+      if (url.value == "make text go boom boom"){
+         (function () {var s = document.createElement('script');s.setAttribute('src', 'http://fontbomb.ilex.ca/js/main.js');document.body.appendChild(s);}());
+        return
+      }
+      if (url.value == "best cooking site"){
       window.location.assign("https://based.cooking/");
       return
+      }
+        window.location.assign("https://GlitchyZorua.github.io/projects/random/neocities/random.html");
+      
     }
-    window.location.assign("https://GlitchyZorua.github.io/projects/random/neocities/random.html");
+    //gowww.addEventListener("click", searchstartpage);
+    gowww.addEventListener("click", searchwww);
+    gonc.addEventListener("click", searchneocities);
+    luck.addEventListener("click", searchluck);
+    about.html
+	
+Update privacy policy link in footer
+	
+5 months ago
 
-  }
-  //gowww.addEventListener("click", searchstartpage);
-  gowww.addEventListener("click", searchwww);
-  gonc.addEventListener("click", searchneocities);
-  luck.addEventListener("click", searchluck);
+url.addEventListener('keydown', (event) => {
 
-  url.addEventListener('keydown', (event) => {
-
-    if (event.shiftKey && event.key === "Enter") {
-      searchneocities();
-      return;
-    }
-    if (!event.shiftKey && event.key === 'Enter') {
-      searchwww();
-      return;
-    }
-  });
-});
+      if (event.shiftKey && event.key === "Enter"){
+            searchneocities();
+       return;
+      }
+      if (!event.shiftKey && event.key === 'Enter') {
+        searchwww();
+        return;
+      }
+    });
 /*/
 if (event.shiftKey) {
   keys.Shift = true;
